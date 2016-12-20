@@ -1,0 +1,248 @@
+"Id","Name","Model","Operating System","Operating Systemn Version","MAC Address","Serial Number","Manufacturer","Friendly Model","Vendor Unique Identifier","Vendor Name","Device Class","Form Factor","Product Type","Audio Enabled","Availability","Location","Retained By ID","Retained By Name","Enabled","Slot Number","Next Reservation Start Time","Next Reservation End Time","Reserved By ID","Reserved By Name","Last In Use","Last Disconnected","Last Connected","Deleted","Notes"
+"711d3447-eaee-46f2-acb7-dbe374f60cb8","HTC_2.3.3","HTC Flyer P510e","Android","2.3.3","d8:b3:77:1e:d8:f6","HT15WT402105","HTC","HTC Flyer P510e","HT15WT402105","HTC_HT15WT402105","","Unknown","","False","Offline","","","","True","","","","","","","2015-12-21 11:43:39","","False","Testing note"
+"98f33c3e-6b72-4f6b-aad7-5045e624b159","motorola_TA2070KKJN","MB860","Android","2.3.6","c8:aa:21:af:e5:88","TA2070KKJN","motorola","Motorola Attrix","TA2070KKJN","motorola_TA2070KKJN","","Unknown","","False","Offline","","","","True","","","","","","","2015-12-09 05:09:06","","False",""
+"5914529c-3a6b-48d8-8aa1-60c468463cfa","samsung_0123456789ABCDEF","GT-I9001","Android","2.3.6","50:cc:f8:16:8a:f1","0123456789ABCDEF","samsung","Galaxy S Plus","0123456789ABCDEF","samsung_0123456789ABCDEF","","Unknown","","False","Offline","","","","True","","","","","","","2015-12-31 09:24:43","","False",""
+"e705110e-b61f-4556-9629-74bc36e7f29a","Samsung7GalaxyTab","GT-P6200","Android","3.2","84:25:db:03:25:b4","46411939FE4479BE","samsung","Galaxy Tab 7","46411939FE4479BE","samsung_46411939FE4479BE","","Unknown","","False","Offline","","","","True","","","","","","","2015-12-30 05:44:45","","False",""
+"bb81d1bf-e007-4f7e-99c7-eaaed8b7197c","Knidle","KFTT","Android","4.0.3","f0:4f:7c:09:cf:93","D025A0A0302302DF","Amazon","Kindle Fire","D025A0A0302302DF","Amazon_D025A0A0302302DF","","Unknown","","False","Offline","","","","True","0","","","","","","2015-11-16 06:15:07","","False","Hello 123"
+"d1d5fb6f-4ada-4025-a4a6-d81afd254ff3","samsung_c1607db10d58e6f","GT-P5100","Android","4.0.4","c8:19:f7:e7:d0:6c","c1607db10d58e6f","samsung","Galaxy Tab 2","c1607db10d58e6f","samsung_c1607db10d58e6f","","Unknown","","False","Offline","","","","True","","","","","","","2015-12-08 16:00:24","","False",""
+"0a9869c5-f7ca-4bc6-947d-8caed47c7087","Micromax_Canvass","A210","Android","4.2.1","00:73:8d:03:0c:62","LBDE9595AAQGBIJV","Micromax","Canvas 4","LBDE9595AAQGBIJV","Micromax_LBDE9595AAQGBIJV","","Unknown","","False","Offline","","","","True","","","","","","","2015-12-28 12:20:53","","False","Test Note. Test Note."
+"f616720c-02f3-456d-8fea-b44fcdcc322b","Micromax_ONWKYH9HPBHYJNOZ","A210","Android","4.2.1","00:73:8d:03:24:1d","ONWKYH9HPBHYJNOZ","Micromax","Canvas 4","ONWKYH9HPBHYJNOZ","Micromax_ONWKYH9HPBHYJNOZ","","Unknown","","False","Offline","","","","True","","","","","","","2015-12-09 12:32:54","","False",""
+"67d74cbb-2ae9-446e-8706-231a01869a74","Spice_Mi498HA14090350","Spice Mi-498","Android","4.4.4","/system/bin/sh: cat: /sys/class/net/eth0/address: No such file or directory","Mi498HA14090350","Spice","Spice Mi-498","Mi498HA14090350","Spice_Mi498HA14090350","","Unknown","","False","Offline","","","","True","","","","","","","2015-12-28 09:26:38","","False",""
+"5c794822-69b7-4122-96cb-74b8db629d81","MobileLabsiPad1 ","MC979","IOS","5.0.1","70:de:e2:4f:47:f6","DMPGL6AUDKPH","Apple","iPad 2","647767d5e070806cd7d2787ab59a567a128eabd6","MobileLabsiPad1 ","iPad","Tablet","iPad2,1","False","Offline","","","","True","","","","","","","2015-12-18 05:09:38","","False","gdgdfgfdgdf"
+"86ed53da-0949-4122-a0b8-20718de85f89","iPhone4","MC608","IOS","6.0.1","7c:c5:37:bf:a1:cc","80033EKKA4S","Apple","iPhone 4","98bb326ae78b1fbb3d53c3403d5ebc0dff754ea2","iPhone 17","iPhone","Phone","iPhone3,1","False","Offline","","","","True","","","","","","","2015-12-31 09:26:15","","False",""
+"ca087955-6dd9-4f7d-af51-7829bf4fa24c","Device111","MC979","IOS","6.1.3","70:de:e2:50:3c:28","DMPGL8T0DKPH","Apple","iPad 2","37fc6a59b8c91a59e11cf0d4253f721dea56d1b8","Naveen iPad","iPad","Tablet","iPad2,1","False","Offline","","","","True","","","","","","","2016-01-01 02:43:54","","False",""
+"4bd786d8-a816-4e68-8cea-c77ee6637d61","Device1","MC676","IOS","7.1.2","24:ab:81:d1:c2:91","C79F509CDDP7","Apple","iPhone 4","1434368cd25c203ca012674bd67677e0804322eb","Iphone 7","iPhone","Phone","iPhone3,3","False","Offline","","","","True","","","","","","","2015-12-16 13:50:46","","False","Hello 12345"
+"da54d334-2574-49c9-a12c-aeec2ca0c1a4","deviceConnect iPhone","MC318","IOS","7.1.2","7c:c5:37:bc:1b:05","82033V8PA4S","Apple","iPhone 4","fc9384470487de36071d0d803959ddd6bf35a7de","deviceConnect’s iPhone","iPhone","Phone","iPhone3,1","False","Offline","","","","False","","","","","","","2015-12-09 12:33:29","","True",""
+"657582f1-6dda-4388-a3ed-973f1ba71de6","iPhone5S","MF353","IOS","8.2","9c:35:eb:e3:fd:06","DX3PH0ATFRC5","Apple","iPhone 5s","bda8213eca3ccd2eb43b1d3101c6df0c31959279","Vinita's iPhone","iPhone","Phone","iPhone6,2","False","Offline","","","","True","","","","","","","2015-12-31 09:21:55","","False",""
+"346f58fb-4451-4329-b7cb-abc1baed24ea","iPhone6+","MGA82","IOS","8.3","a0:18:28:12:43:b0","F2LPK5UUG5QQ","Apple","iPhone 6 Plus","5b5b69f24e47f4e44b966c23f812d70cbcd74c2e","Vinita’s iPhone","iPhone","Phone","iPhone7,1","False","Offline","","","","True","","","","","","","2015-12-30 10:24:19","","False",""
+"d73f69ca-a64f-4473-97f7-abb13a034637","ML IPad 3a","MD331","IOS","8.4.1","64:20:0c:6e:ed:53","DMPHNSHPDJ8T","Apple","iPad 3","06a65a38f70737449ba171a433b36fba6a554727","ML IPad 3a","iPad","Tablet","iPad3,1","False","Offline","","","","True","","","","","","","2015-12-31 09:25:45","","False",""
+"a1ac2d7b-68a0-4974-a382-50984f666bba","iOS8-iPod touch_Audio","MD723","IOS","9.0","8c:2d:aa:74:fa:93","CCQJK1YFF4K4","Apple","iPod Touch 5G","7ee42cd6c2ec0c025c0c2e2e87eee9d9f5ca1eaf","deviceConnect’s iPod","iPod","Phone","iPod5,1","False","Offline","","","","False","","","","","","","2015-07-29 11:22:44","","True",""
+"708eb9dd-135a-454d-930d-3b575e31c3d6","iPad Air2","MGL12","IOS","9.0.1","90:8d:6c:86:08:0f","DMPNV1N9G5VJ","Apple","iPad Air 2","b3ccdef848bbff42c20910bd3ddafdeb6e6ff753","Noida QA’s iPad","iPad","Tablet","iPad5,3","False","Offline","","","","True","","","","","","","2015-10-05 09:36:15","","False",""
+"778c1379-9a4e-44ec-859d-76af94493e06","iPod touch 6G","MKH42","IOS","9.0.2","a4:31:35:d2:c3:17","CCQQC0PAGGK5","Apple","iPod Touch 6G","86cf05a77ce54c954afd758c5d6efbcbc88f0153","deviceConnect’s iPod","iPod","Phone","iPod7,1","False","Offline","","","","True","","","","","","","2015-12-31 09:24:47","","False",""
+"10075585-0425-497c-9df2-98ea2b98e55d","iPad4","MD510","IOS","9.1","bc:3b:af:89:77:ec","DMQJQ3NXF182","Apple","iPad 4","9c28e008f8b0e0a9a2e015f8c2adbb65d825bdde","Noida's iPad","iPad","Tablet","iPad3,4","False","Offline","","","","True","","","","","","","2015-12-21 10:48:40","","False",""
+"b47e68ae-8541-44f6-95b0-0cca10c70f22","SamsungS3","GT-I9300","Android","4.0.4","5c:0a:5b:4f:fc:a1","4df1de8c0bce5fcd","samsung","Galaxy S3","4df1de8c0bce5fcd","samsung_4df1de8c0bce5fcd","","Unknown","","False","Online","","","","True","12","","","","","","2016-01-04 06:41:49","2016-01-04 06:41:51","False",""
+"e82c2c6f-417e-4027-85b3-3e41421d45a3","samsung_c16077c1e1f4a5f","GT-P5100","Android","4.1.2","50:01:bb:1d:98:92","c16077c1e1f4a5f","samsung","Galaxy Tab 2","c16077c1e1f4a5f","samsung_c16077c1e1f4a5f","","Unknown","","False","Online","","","","True","","","","","","","2016-01-04 06:41:49","2016-01-04 06:41:51","False",""
+"8c07e41c-a77d-472f-ab58-bdffcab21628","samsung_4df10ab97cd35fc7","GT-I9300","Android","4.3","5c:0a:5b:4b:09:e1","4df10ab97cd35fc7","samsung","Galaxy S3","4df10ab97cd35fc7","samsung_4df10ab97cd35fc7","","Unknown","","False","Online","","","","True","","","","","","","2016-01-04 06:41:49","2016-01-04 06:41:51","False",""
+"44e0ac20-f0dc-4a78-b0ed-62a1f9cb07b8","asus_08de39ec","Nexus 7","Android","5.1","ac:22:0b:a3:7c:f4","08de39ec","asus","Nexus 7","08de39ec","asus_08de39ec","","Unknown","","True","Online","","","","True","","","","","","","2016-01-04 06:41:49","2016-01-04 06:41:52","False",""
+"f671a493-9cc2-4e6a-80b4-489fb332d5ef","LGE_093514eb0ddf5b31","Nexus 5","Android","6.0.1","88:c9:d0:b6:80:3b","093514eb0ddf5b31","LGE","Nexus 5","093514eb0ddf5b31","LGE_093514eb0ddf5b31","","Unknown","","False","Online","","","","True","5","","","","","","2016-01-04 06:41:49","2016-01-04 06:41:51","False","Notes"
+"e7bd6320-6a1f-4c18-8cb9-346187a189ac","motorola_ZX1G42C78H","Nexus 6","Android","6.0.1","e8:91:20:09:10:78","ZX1G42C78H","motorola","Nexus 6","ZX1G42C78H","motorola_ZX1G42C78H","","Unknown","","False","Online","","","","True","","","","","","","2016-01-04 06:41:49","2016-01-04 06:41:50","False",""
+"a4c14516-e113-4836-ae56-374cbef8ce82","Mobile Labs ipad","MD331","IOS","6.0.1","64:20:0c:57:4b:8a","DMPHN46SDJ8T","Apple","iPad 3","b34e6f3f5677cf6463375f584cdd882ed57667e7","Mobile Labs Ipad-3","iPad","Tablet","iPad3,1","False","Online","","","","True","","","","","","","2016-01-04 06:41:49","2016-01-04 06:41:52","False",""
+"04ef53ab-5227-457d-97c6-f389aac601fb","dcb_iPhone4","MC608","IOS","7.1.2","dc:2b:61:65:bd:0a","7W0426HPA4S","Apple","iPhone 4","49b26360bf63c9c9f2c4723072202e668d6cb4a6","No phone","iPhone","Phone","iPhone3,1","False","Online","","","","True","5","","","","","","2016-01-04 06:41:49","2016-01-04 06:41:53","False","Gone are the days when mobile phones were considered as luxury thing to have with. 
+The growing competition in mobile manufacturers has lowered the prices of mobile phones to that extent that nowadays, buying a mobile phone is not a big deal. 
+Just spend a few bucks and you are proud owner of a mobile phone. 
+In today’s time, it’s very hard to find a person who does not own a mobile phone. 
+The small gadget is a basic necessity of life. 
+But why everyone tags the mobile phones as basic necessity of life? 
+What is the importance of mobile phones in our lives? Here is the answer.
+
+Easy Way of Communication
+
+What the mobile phones are meant for? Yeah, you answered it right- for communication. 
+So the first and foremost role that mobile phones play in our lives is that they provide us an easy and fast way of communication. 
+Go wherever you want, whenever you want; your mobile phone will stay you connected with all.
+Got an important message for your friend/family member?
+Just send instant SMS or call straight away and make your important message reach the intended person in no time. Simple!
+
+Internet Access & Social Media
+
+The Internet is one of the biggest blessings to man by technology. One just cannot imagine the life without the Internet. 
+Everyone likes/wants to stay connected with the Internet all the time. 
+Thanks to the mobile phones that make it possible. 
+The mobile phones let users enjoy the social media on the go. 
+A major part of modern world is addicted to social networking sites.
+Mobile Phones let them be active in social media on the move.
+
+Mobile Phones Save Money
+
+Yes, they do. Just buy mid-range or high-end mobile phone, and ultimately, you become proud owner of many gadgets, the gadgets that are packed in the mobile phone. 
+For example, by buying mobile phone, you don’t need to spend money on a home phone, you don’t need to buy any music or video player, you don’t need to buy radio etc. 
+If the mobile phone is high-end, then you need not to buy gaming console and maybe a computer as well.
+
+Mobile Phones Ensure Safety
+
+The mobile phones provide us security. How? Well, to understand this better, just consider any situation in which you urgently need to contact fire brigade or police. 
+What would you do in such case? 
+The landlines are not available everywhere, but the mobile phones do. Just take your mobile phone out, dial the number and that’s it. 
+Your one good step of buying mobile phone will prove as great money saver for you.
+
+Mobile Phones Helps in Business
+
+Got an important message for your client or employee? Pick up your mobile phone and communicate with the intended person straight away. 
+Since businesses require constant communication, so one just can’t imagine any business without the use of mobile phones. 
+And with all those new smart phones available in market these days, a businessman can organize the schedule and set reminders, so he does not forget any important meeting. 
+Mobile phones come packed with lot of business apps which makes their life easier. 
+Thus mobile phones are like a boon for businesses.
+
+So, folks! These are the main benefits of having mobile phones in our life. 
+Now it’s your turn, tell us why Mobile phone is important for you in the comments below.
+
+Positives of cell phones
+
+Communication
+
+The very first positive point of mobile phones is communication. With mobile phones you can communicate with anyone from anywhere at any time. 
+Now days, the smartphones which are coming are small in size and light in weight which makes it very easy to carry them. 
+You don’t need to sit beside the receiver as your mobile phone is not attached with anything.
+
+Entertainment
+Mobile phones have become a source of unlimited entertainment. The things which we never thought would be present in a mobile phone are now possible. 
+Smartphones have come into existence which not only help you in making calls but also help you to stay entertained by allowing you to play games, listen to music and do lots of other stuff.
+
+Mobile phone even come with special apps for kids to increase their brainstorming which is pretty good.
+
+Beneficial in studies
+If you are using a smartphone, you can take advantage of it in your studies or your business. 
+The smartphones which come with Android, Apple iOS and Windows Phone operating system come with educational apps which can be used while you are in college. 
+If you are into business you can install applications like Skype which will help you in communicating with your clients on the go.
+
+Negative impact of cell phones
+Let’s have a look at negative impact of cell phones.
+
+Bad impact on studies
+It is true that mobile phones can help students in studies but only if they use them wisely. 
+Most of the students become additive to mobile phones and are found playing games, chatting with their friends and watching movies and other stuff. 
+If students are busy keeping their eyes on their mobile phones at all times they won’t get time for studying which would lead to poor grades.
+
+Heath issues and accidents
+Mobile phones lead to a lot of accidents. A lot of people do their daily work, drive while taking on mobile phones. 
+There is high risk of accident if you are talking on the mobile phone and driving as you are giving your half attention to the mobile call and are having half attention on the road.
+
+Research studies have also claimed that mobile phones have a negative impact on health of an individual. 
+If you are using mobile phone for long hours daily it might lead to serious health issues.
+
+Conclusion
+These were the advantages and disadvantages of mobile phones. In the end, it all depends on our usage. 
+Cell phones are the most personal device to us and we should make an optimal use of them. 
+What are your views regarding the same? 
+Share it with us using the comments section below.
+
+What is the point of referencing?
+The reasons why accurate referencing is essential for academic work are not immediately apparent, particularly for students new to higher education. 
+This essay will, therefore, examine why referencing is an essential part of academic writing and in the process address the question: ‘what is the point of referencing?’
+There are three main reasons for referencing. Firstly, referencing helps student writers to construct, structure, support and communicate arguments. 
+Secondly, references link the writer’s work to the existing body of knowledge. 
+Thirdly, only through referencing can academic work gain credibility.
+
+Let's discuss these three aspects of referencing in detail, examine their validity, identify how referencing affects a writer’s writing style, and show how referencing helps students to present their own ideas and opinions in assignments.
+
+Becker (1986) believes the construction of arguments is the most important function of referencing systems. There are four dimensions to this. Firstly, drawing on existing literature, academic writers can construct their own arguments - and adopting a referencing system supports this process. 
+Secondly, it helps to structure the existing information and arguments by linking published authors to their respective works. 
+Third, referencing helps academic writers identify sources, gather evidence, as well as show the relationships between existing knowledge. Finally, referencing also provide a framework to enable writers to structure their arguments effectively by assessing, comparing, contrasting or evaluating different sources. 
+
+However, merely describing existing research, rather than producing their own contributions to the discussion, is inadequate for most academic writers. It is important for every academic writer to avoid this narrow-minded argumentation trap; academic writing is not just about compiling existing arguments, but adding new perspectives, finding new arguments, or new ways of combining existing knowledge. 
+For example, Barrow and Mosley (2005) combined the fields Human Resources and Brand Management to develop the ‘Employer Brand’ concept.
+
+When the argument has been constructed, it needs academic support – and only references can provide this required support. We all know that academic works are not about stating opinions - as that would be akin to journalistic comment - but arguments are supported by evidence, and only arguments presented with sufficient and valid support are credible. Hence arguments are only as strong as the underlying evidence: arguments relying on questionable sources are – well, questionable. 
+
+Referencing also enables writers to communicate their arguments efficiently. The referencing framework allows them to produce a holistic work with different perspectives, whilst still emphasising their own positions; quotations, for example, help the reader to differentiate the writer’s opinions from others. Again, if arguments are badly referenced, readers might not be able to distinguish the writers’ own opinions from their sources. 
+Especially for academic beginners, referencing helps them to adapt to the precise and accurate academic writing style required for degree level study. Neville (2007, p. 10) emphasises this issue of writing style, and identifies the quest to “find your own voice” as one of the main reasons for referencing. 
+In academic writing, this requires developing an individual style that is neither convoluted nor convivial in tone, but which is clear, open but measured, and is about identifying and using evidence selectively to build and support one’s own arguments.
+Immanuel Kant said “Science is organized knowledge.” This short quote brilliantly captures the point that the primary mission of science and other disciplines is not to promote individual achievements, but to establish a connected, collective, and recognised body of knowledge. 
+This is the most fundamental reason for referencing from a theoretical point of view. Hence some authors identify this as the principal reason for referencing: “The primary reason for citation [...] is that it encourages and supports the collective construction of academic knowledge” (Walker & Taylor, 2006, pp.29-30).
+The writer’s references are links to this network of knowledge. 1Without these links an academic work would operate within an academic vacuum, unrelated to existing academic knowledge. A writer needs to show how his or her work relates to current research and debates in their chosen subject area.
+
+Referencing not only connects a student writer’s work to existing research, but clearly distinguishes the writer’s own ideas from established arguments –and failing to indicate that ideas are taken from the existing body of knowledge would be plagiarism. This is one of the five principles of referencing identified by Walker and Taylor (2006). 
+Neville also identifies the link to existing knowledge as one of the main reasons for adopting a referencing style; he highlights “tracing the origin of ideas”, “spreading knowledge” and “indicating appreciation” (2007, pp.9-10), which leads to the next point. 
+
+Referencing a work indicates that the writer finds the referenced material important: hence references create ‘academic clout’ in an assignment. In the global academic community a more-cited article will find more recognition. However, this practice is not without its critics. Thody, for example, calls this the “sycophantic” use of referencing - and it can certainly be used to “flatter your mentors” (2006, p.186). 
+Thompson calls this “ritualized obedience to the reigning authorities” (2003, p.27).  So the important issue here is not about selecting references for their expediency value, but for their enduring quality. This brings us to the next point: credibility.
+
+Martin Joseph Routh said in 1878: “You will find it a very good practice always to verify your references, sir!” Correct referencing enables, therefore, the reader to check sources and verify conclusions. The issue of credibility is identified by commentators as a key issue in referencing.  Nygaard, for example, identifies credibility as the main reason for referencing: “The goal of referencing is to enhance [...] your credibility as an author” (2008, p.177).   
+Neville came to the same conclusion that “to be taken seriously, [a writer] needs to make a transparent presentation of valid evidence” (2007, p.10). Also the Academic Learning Support from Central Queensland University (2007) sees the credibility of arguments as primary motive for correct referencing.
+References allow the reader to trace the source of the writer’s arguments, consult the original independently and verify whether the writer’s usage of the sources is valid. Some readers, for example, interested in a point in question, might want to verify the writer’s interpretation of a referenced work. The quality of references is, therefore, extremely important for the credibility of an academic work. 
+Arguments are only as good as the underlying references - untrustworthy and unreliable sources can even invalidate an argument, while reliable and dependable sources strengthen the writer’s argument.
+Finally, the writer’s selection of sources also demonstrates whether the writer has evaluated all important arguments and has a thorough understanding of the subject. Only a credible work that takes all important arguments into account will find acceptance in the academic world.
+So what is the point of referencing?  This essay has presented three main arguments why academic writers have to adopt a referencing system: Firstly, it helps to structure, support and communicate arguments. Secondly, it links the work to the existing body of knowledge, although it is also important for writers not merely to present the ideas of others, but to contribute where possible with innovative ideas of their own. 
+Thirdly, only referencing can give the argument credibility – and this is a particularly significant element for success in the academic world
+
+Repetition from line number 97
+Let's discuss these three aspects of referencing in detail, examine their validity, identify how referencing affects a writer’s writing style, and show how referencing helps students to present their own ideas and opinions in assignments.
+
+Becker (1986) believes the construction of arguments is the most important function of referencing systems. There are four dimensions to this. Firstly, drawing on existing literature, academic writers can construct their own arguments - and adopting a referencing system supports this process. 
+Secondly, it helps to structure the existing information and arguments by linking published authors to their respective works. 
+Third, referencing helps academic writers identify sources, gather evidence, as well as show the relationships between existing knowledge. Finally, referencing also provide a framework to enable writers to structure their arguments effectively by assessing, comparing, contrasting or evaluating different sources. 
+
+However, merely describing existing research, rather than producing their own contributions to the discussion, is inadequate for most academic writers. It is important for every academic writer to avoid this narrow-minded argumentation trap; academic writing is not just about compiling existing arguments, but adding new perspectives, finding new arguments, or new ways of combining existing knowledge. 
+For example, Barrow and Mosley (2005) combined the fields Human Resources and Brand Management to develop the ‘Employer Brand’ concept.
+
+When the argument has been constructed, it needs academic support – and only references can provide this required support. We all know that academic works are not about stating opinions - as that would be akin to journalistic comment - but arguments are supported by evidence, and only arguments presented with sufficient and valid support are credible. Hence arguments are only as strong as the underlying evidence: arguments relying on questionable sources are – well, questionable. 
+
+Referencing also enables writers to communicate their arguments efficiently. The referencing framework allows them to produce a holistic work with different perspectives, whilst still emphasising their own positions; quotations, for example, help the reader to differentiate the writer’s opinions from others. Again, if arguments are badly referenced, readers might not be able to distinguish the writers’ own opinions from their sources. 
+Especially for academic beginners, referencing helps them to adapt to the precise and accurate academic writing style required for degree level study. Neville (2007, p. 10) emphasises this issue of writing style, and identifies the quest to “find your own voice” as one of the main reasons for referencing. 
+In academic writing, this requires developing an individual style that is neither convoluted nor convivial in tone, but which is clear, open but measured, and is about identifying and using evidence selectively to build and support one’s own arguments.
+Immanuel Kant said “Science is organized knowledge.” This short quote brilliantly captures the point that the primary mission of science and other disciplines is not to promote individual achievements, but to establish a connected, collective, and recognised body of knowledge. 
+This is the most fundamental reason for referencing from a theoretical point of view. Hence some authors identify this as the principal reason for referencing: “The primary reason for citation [...] is that it encourages and supports the collective construction of academic knowledge” (Walker & Taylor, 2006, pp.29-30).
+The writer’s references are links to this network of knowledge. 2Without these links an academic work would operate within an academic vacuum, unrelated to existing academic knowledge. A writer needs to show how his or her work relates to current research and debates in their chosen subject area.
+
+Referencing not only connects a student writer’s work to existing research, but clearly distinguishes the writer’s own ideas from established arguments –and failing to indicate that ideas are taken from the existing body of knowledge would be plagiarism. This is one of the five principles of referencing identified by Walker and Taylor (2006). 
+Neville also identifies the link to existing knowledge as one of the main reasons for adopting a referencing style; he highlights “tracing the origin of ideas”, “spreading knowledge” and “indicating appreciation” (2007, pp.9-10), which leads to the next point. 
+
+Referencing a work indicates that the writer finds the referenced material important: hence references create ‘academic clout’ in an assignment. In the global academic community a more-cited article will find more recognition. However, this practice is not without its critics. Thody, for example, calls this the “sycophantic” use of referencing - and it can certainly be used to “flatter your mentors” (2006, p.186). 
+Thompson calls this “ritualized obedience to the reigning authorities” (2003, p.27).  So the important issue here is not about selecting references for their expediency value, but for their enduring quality. This brings us to the next point: credibility.
+
+Martin Joseph Routh said in 1878: “You will find it a very good practice always to verify your references, sir!” Correct referencing enables, therefore, the reader to check sources and verify conclusions. The issue of credibility is identified by commentators as a key issue in referencing.  Nygaard, for example, identifies credibility as the main reason for referencing: “The goal of referencing is to enhance [...] your credibility as an author” (2008, p.177).   
+Neville came to the same conclusion that “to be taken seriously, [a writer] needs to make a transparent presentation of valid evidence” (2007, p.10). Also the Academic Learning Support from Central Queensland University (2007) sees the credibility of arguments as primary motive for correct referencing.
+References allow the reader to trace the source of the writer’s arguments, consult the original independently and verify whether the writer’s usage of the sources is valid. Some readers, for example, interested in a point in question, might want to verify the writer’s interpretation of a referenced work. The quality of references is, therefore, extremely important for the credibility of an academic work. 
+Arguments are only as good as the underlying references - untrustworthy and unreliable sources can even invalidate an argument, while reliable and dependable sources strengthen the writer’s argument.
+Finally, the writer’s selection of sources also demonstrates whether the writer has evaluated all important arguments and has a thorough understanding of the subject. Only a credible work that takes all important arguments into account will find acceptance in the academic world.
+So what is the point of referencing?  This essay has presented three main arguments why academic writers have to adopt a referencing system: Firstly, it helps to structure, support and communicate arguments. Secondly, it links the work to the existing body of knowledge, although it is also important for writers not merely to present the ideas of others, but to contribute where possible with innovative ideas of their own. 
+Thirdly, only referencing can give the argument credibility – and this is a particularly significant element for success in the academic world.
+
+Repetition from line number 97
+Let's discuss these three aspects of referencing in detail, examine their validity, identify how referencing affects a writer’s writing style, and show how referencing helps students to present their own ideas and opinions in assignments.
+
+Becker (1986) believes the construction of arguments is the most important function of referencing systems. There are four dimensions to this. Firstly, drawing on existing literature, academic writers can construct their own arguments - and adopting a referencing system supports this process. 
+Secondly, it helps to structure the existing information and arguments by linking published authors to their respective works. 
+Third, referencing helps academic writers identify sources, gather evidence, as well as show the relationships between existing knowledge. Finally, referencing also provide a framework to enable writers to structure their arguments effectively by assessing, comparing, contrasting or evaluating different sources. 
+
+However, merely describing existing research, rather than producing their own contributions to the discussion, is inadequate for most academic writers. It is important for every academic writer to avoid this narrow-minded argumentation trap; academic writing is not just about compiling existing arguments, but adding new perspectives, finding new arguments, or new ways of combining existing knowledge. 
+For example, Barrow and Mosley (2005) combined the fields Human Resources and Brand Management to develop the ‘Employer Brand’ concept.
+
+When the argument has been constructed, it needs academic support – and only references can provide this required support. We all know that academic works are not about stating opinions - as that would be akin to journalistic comment - but arguments are supported by evidence, and only arguments presented with sufficient and valid support are credible. Hence arguments are only as strong as the underlying evidence: arguments relying on questionable sources are – well, questionable. 
+
+Referencing also enables writers to communicate their arguments efficiently. The referencing framework allows them to produce a holistic work with different perspectives, whilst still emphasising their own positions; quotations, for example, help the reader to differentiate the writer’s opinions from others. Again, if arguments are badly referenced, readers might not be able to distinguish the writers’ own opinions from their sources. 
+Especially for academic beginners, referencing helps them to adapt to the precise and accurate academic writing style required for degree level study. Neville (2007, p. 10) emphasises this issue of writing style, and identifies the quest to “find your own voice” as one of the main reasons for referencing. 
+In academic writing, this requires developing an individual style that is neither convoluted nor convivial in tone, but which is clear, open but measured, and is about identifying and using evidence selectively to build and support one’s own arguments.
+Immanuel Kant said “Science is organized knowledge.” This short quote brilliantly captures the point that the primary mission of science and other disciplines is not to promote individual achievements, but to establish a connected, collective, and recognised body of knowledge. 
+This is the most fundamental reason for referencing from a theoretical point of view. Hence some authors identify this as the principal reason for referencing: “The primary reason for citation [...] is that it encourages and supports the collective construction of academic knowledge” (Walker & Taylor, 2006, pp.29-30).
+The writer’s references are links to this network of knowledge. 3Without these links an academic work would operate within an academic vacuum, unrelated to existing academic knowledge. A writer needs to show how his or her work relates to current research and debates in their chosen subject area.
+
+Referencing not only connects a student writer’s work to existing research, but clearly distinguishes the writer’s own ideas from established arguments –and failing to indicate that ideas are taken from the existing body of knowledge would be plagiarism. This is one of the five principles of referencing identified by Walker and Taylor (2006). 
+Neville also identifies the link to existing knowledge as one of the main reasons for adopting a referencing style; he highlights “tracing the origin of ideas”, “spreading knowledge” and “indicating appreciation” (2007, pp.9-10), which leads to the next point. 
+
+Referencing a work indicates that the writer finds the referenced material important: hence references create ‘academic clout’ in an assignment. In the global academic community a more-cited article will find more recognition. However, this practice is not without its critics. Thody, for example, calls this the “sycophantic” use of referencing - and it can certainly be used to “flatter your mentors” (2006, p.186). 
+Thompson calls this “ritualized obedience to the reigning authorities” (2003, p.27).  So the important issue here is not about selecting references for their expediency value, but for their enduring quality. This brings us to the next point: credibility.
+
+Martin Joseph Routh said in 1878: “You will find it a very good practice always to verify your references, sir!” Correct referencing enables, therefore, the reader to check sources and verify conclusions. The issue of credibility is identified by commentators as a key issue in referencing.  Nygaard, for example, identifies credibility as the main reason for referencing: “The goal of referencing is to enhance [...] your credibility as an author” (2008, p.177).   
+Neville came to the same conclusion that “to be taken seriously, [a writer] needs to make a transparent presentation of valid evidence” (2007, p.10). Also the Academic Learning Support from Central Queensland University (2007) sees the credibility of arguments as primary motive for correct referencing.
+References allow the reader to trace the source of the writer’s arguments, consult the original independently and verify whether the writer’s usage of the sources is valid. Some readers, for example, interested in a point in question, might want to verify the writer’s interpretation of a referenced work. The quality of references is, therefore, extremely important for the credibility of an academic work. 
+Arguments are only as good as the underlying references - untrustworthy and unreliable sources can even invalidate an argument, while reliable and dependable sources strengthen the writer’s argument.
+Finally, the writer’s selection of sources also demonstrates whether the writer has evaluated all important arguments and has a thorough understanding of the subject. Only a credible work that takes all important arguments into account will find acceptance in the academic world.
+So what is the point of referencing?  This essay has presented three main arguments why academic writers have to adopt a referencing system: Firstly, it helps to structure, support and communicate arguments. Secondly, it links the work to the existing body of knowledge, although it is also important for writers not merely to present the ideas of others, but to contribute where possible with innovative ideas of their own. 
+Thirdly, only referencing can give the argument credibility – and this is a particularly significant element for success in the academic world.
+
+Repetition from line number 97
+Let's discuss these three aspects of referencing in detail, examine their validity, identify how referencing affects a writer’s writing style, and show how referencing helps students to present their own ideas and opinions in assignments.
+
+Becker (1986) believes the construction of arguments is the most important function of referencing systems. There are four dimensions to this. Firstly, drawing on existing literature, academic writers can construct their own arguments - and adopting a referencing system supports this process. 
+Secondly, it helps to structure the existing information and arguments by linking published authors to their respective works. 
+Third, referencing helps academic writers identify sources, gather evidence, as well as show the relationships between existing knowledge. Finally, referencing also provide a framework to enable writers to structure their arguments effectively by assessing, comparing, contrasting or evaluating different sources. 
+
+However, merely describing existing research, rather than producing their own contributions to the discussion, is inadequate for most academic writers. It is important for every academic writer to avoid this narrow-minded argumentation trap; academic writing is not just about compiling existing arguments, but adding new perspectives, finding new arguments, or new ways of combining existing knowledge. 
+For example, Barrow and Mosley (2005) combined the fields Human Resources and Brand Management to develop the ‘Employer Brand’ concept.
+
+When the argument has been constructed, it needs academic support – and only references can provide this required support. We all know that academic works are not about stating opinions - as that would be akin to journalistic comment - but arguments are supported by evidence, and only arguments presented with sufficient and valid support are credible. Hence arguments are only as strong as the underlying evidence: arguments relying on questionable sources are – well, questionable. 
+
+Referencing also enables writers to communicate their arguments efficiently. The referencing framework allows them to produce a holistic work with different perspectives, whilst still emphasising their own positions; quotations, for example, help the reader to differentiate the writer’s opinions from others. Again, if arguments are badly referenced, readers might not be able to distinguish the writers’ own opinions from their sources. 
+Especially for academic beginners, referencing helps them to adapt to the precise and accurate academic writing style required for degree level study. Neville (2007, p. 10) emphasises this issue of writing style, and identifies the quest to “find your own voice” as one of the main reasons for referencing. 
+In academic writing, this requires developing an individual style that is neither convoluted nor convivial in tone, but which is clear, open but measured, and is about identifying and using evidence selectively to build and support one’s own arguments.
+Immanuel Kant said “Science is organized knowledge.” This short quote brilliantly captures the point that the primary mission of science and other disciplines is not to promote individual achievements, but to establish a connected, collective, and recognised body of knowledge. 
+This is the most fundamental reason for referencing from a theoretical point of view. Hence some authors identify this as the principal reason for referencing: “The primary reason for citation [...] is that it encourages and supports the collective construction of academic knowledge” (Walker & Taylor, 2006, pp.29-30).
+The writer’s references are links to this network of knowledge. 4Without these links an academic work would operate within an academic vacuum, unrelated to existing academic knowledge. A writer needs to show how his or her work relates to current research and debates in their chosen subject area.
+
+Referencing not only connects a student writer’s work to existing research, but clearly distinguishes the writer’s own ideas from established arguments –and failing to indicate that ideas are taken from the existing body of knowledge would be plagiarism. This is one of the five principles of referencing identified by Walker and Taylor (2006). 
+Neville also identifies the link to existing knowledge as one of the main reasons for adopting a referencing style; he highlights “tracing the origin of ideas”, “spreading knowledge” and “indicating appreciation” (2007, pp.9-10), which leads to the next point. 
+
+Referencing a work indicates that the writer finds the referenced material important: hence references create ‘academic clout’ in an assignment. In the global academic community a more-cited article will find more recognition. However, this practice is not without its critics. Thody, for example, calls this the “sycophantic” use of referencing - and it can certainly be used to “flatter your mentors” (2006, p.186). 
+Thompson calls this “ritualized obedience to the reigning authorities” (2003, p.27).  So the important issue here is not about selecting references for their expediency value, but for their enduring quality. This brings us to the next point: credibility."
+"c4146709-ee49-4ef1-9737-c8f7f18ff65b","iPad_mini","MD540","IOS","8.4","4c:8d:79:3f:f6:f6","F4KK45HTF19J","Apple","iPad mini","42301f81057eecd0a5b4fe1a6c7d9b719286aacc","iPad_Mini","iPad","Tablet","iPad2,7","False","Online","","","","True","","","","","","","2016-01-04 06:44:14","2016-01-04 06:44:46","False",""

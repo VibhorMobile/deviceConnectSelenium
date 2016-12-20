@@ -1,0 +1,1 @@
+: otool -l /var/folders/hz/tkb5wz454fl8fhyw2dv2/T/com.appulize.iresign/Payload/Hp Eprint Services.app > ~/sections.txt

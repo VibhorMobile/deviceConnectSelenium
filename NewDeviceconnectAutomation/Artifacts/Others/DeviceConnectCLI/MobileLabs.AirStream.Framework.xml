@@ -1,0 +1,2891 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MobileLabs.AirStream.Framework</name>
+    </assembly>
+    <members>
+        <member name="T:MobileLabs.AirStream.Framework.ActionExtensions">
+            <summary>
+            Provides utilities that transform Actions.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.ActionExtensions.Debounce(System.Action,System.Int32)">
+            <summary>
+            Returns an Action which ensures that a given Action is only called after a 
+            cooldown period wherein the action is not called. This can be used e.g. to
+            defer handling of a high frequency event until an idle state is reached.
+            </summary>
+            <param name="action">The action to wrap.</param>
+            <param name="timeoutMilliseconds">The timeout before the underlying action is called.</param>
+            <returns>A new Action.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.ActionExtensions.Debounce``2(System.Action{``0,``1},System.Int32)">
+            <summary>
+            Returns an Action which ensures that a given Action is only called after a 
+            cooldown period wherein the action is not called. This can be used e.g. to
+            defer handling of a high frequency event until an idle state is reached.
+            </summary>
+            <typeparam name="T1">The type of the Action's first argument.</typeparam>
+            <typeparam name="T2">The type of the Action's second argument.</typeparam>
+            <param name="action">The action to wrap.</param>
+            <param name="timeoutMilliseconds">The timeout before the underlying action is called.</param>
+            <returns>A new Action.</returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.ByteArrayComparer">
+            <summary>
+            Compares sequences of bytes.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.ByteArrayComparer.Instance">
+            <summary>
+            The standard instance of ByteArrayComparer.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.ByteArrayComparer.Compare(System.Byte[],System.Byte[])">
+            <summary>
+            Compares two byte arrays. Rules:
+            
+              - NULL is less than not null.
+              - the arrays are compared byte by byte up until the first bytes that differ.
+              - if the arrays are of different lengths and the common prefix is equal,
+                the shorter array is less than the longer one.
+            </summary>
+            <param name="x">The first object to compare.</param>
+            <param name="y">The second object to compare.</param>
+            <returns>A negative, zero or positive value indicating the relative order of the two values.</returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Collections.DictionaryExtensions">
+            <summary>
+            Provides extension methods that manipulate dictionaries.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.DictionaryExtensions.Activate``2(System.Collections.Generic.IDictionary{``0,``1},``0)">
+            <summary>
+            Either returns an existing entry in a dictionary or creates a new entry and
+            returns it. The new entry is created using its default constructor.
+            </summary>
+            <typeparam name="TKey">The key type of the dictionary.</typeparam>
+            <typeparam name="TValue">The value type of the dictionary.</typeparam>
+            <param name="dict">The dictionary to query/update.</param>
+            <param name="key">The key to be activated.</param>
+            <returns>Either the existing value in the dictionary for the given key, or the newly instantiated value.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.DictionaryExtensions.Activate``2(System.Collections.Generic.IDictionary{``0,``1},``0,System.Func{``1})">
+            <summary>
+            Either returns an existing entry in a dictionary or creates a new entry and
+            returns it. The new entry is created using the provided constructor function.
+            </summary>
+            <typeparam name="TKey">The key type of the dictionary.</typeparam>
+            <typeparam name="TValue">The value type of the dictionary.</typeparam>
+            <param name="dict">The dictionary to query/update.</param>
+            <param name="key">The key to be activated.</param>
+            <param name="constructor">A function which returns a new instance of the value type.</param>
+            <returns>Either the existing value in the dictionary for the given key, or the newly instantiated value.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.DictionaryExtensions.GetValueOrDefault``2(System.Collections.Generic.IDictionary{``0,``1},``0)">
+            <summary>
+            Either returns an existing entry in a dictionary or the default value of the
+            dictionary's value type.
+            </summary>
+            <typeparam name="TKey">The key type of the dictionary.</typeparam>
+            <typeparam name="TValue">The value type of the dictionary.</typeparam>
+            <param name="dict">The dictionary to query.</param>
+            <param name="key">The dictionary key whose value will be retrieved.</param>
+            <returns>The value associated with the key, or default(TValue).</returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Collections.EnumerableExtensions">
+            <summary>
+            Provides extensions for enumerable operations.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.EnumerableExtensions.IsNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Returns true if the collection is null or empty (ya...).
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.EnumerableExtensions.OrderByNatural``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.String})">
+            <summary>
+            Naturally ascending orders an enumerable by a string.
+            </summary>
+            <typeparam name="T">The type of enumerable.</typeparam>
+            <param name="source">The enumerable to order.</param>
+            <param name="selector">An item selector.</param>
+            <returns>The ordered enumerable</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.EnumerableExtensions.ThenByNatural``1(System.Linq.IOrderedEnumerable{``0},System.Func{``0,System.String})">
+            <summary>
+            Naturally ascending orders an enumerable by a string.
+            </summary>
+            <typeparam name="T">The type of enumerable.</typeparam>
+            <param name="source">The enumerable to order.</param>
+            <param name="selector">An item selector.</param>
+            <returns>The ordered enumerable</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.EnumerableExtensions.OrderByNaturalDescending``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.String})">
+            <summary>
+            Naturally descending orders an enumerable by a string.
+            </summary>
+            <typeparam name="T">The type of enumerable.</typeparam>
+            <param name="source">The enumerable to order.</param>
+            <param name="selector">An item selector.</param>
+            <returns>The ordered enumerable</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.EnumerableExtensions.ThenByNaturalDescending``1(System.Linq.IOrderedEnumerable{``0},System.Func{``0,System.String})">
+            <summary>
+            Naturally descending orders an enumerable by a string.
+            </summary>
+            <typeparam name="T">The type of enumerable.</typeparam>
+            <param name="source">The enumerable to order.</param>
+            <param name="selector">An item selector.</param>
+            <returns>The ordered enumerable</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.EnumerableExtensions.ToDictionarySafe``3(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Func{``0,``2})">
+            <summary>No duplicate key exceptions.</summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Collections.EventSequence">
+            <summary>
+            Executes a sequence of events identified by sequence numbers.
+            </summary>
+            
+            <remarks>
+            Events are identified by a sequence number starting from 0.
+            Whenever a new event is added to the sequence, each event in
+            the sequence is executed until the next unused sequence number
+            is reached.
+            
+            This collection is thread safe, but events may be executed on
+            any thread. Events will always be executed in order.
+            
+            The collection does not actually retain previously executed events,
+            so it's not enumerable.
+            </remarks>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.EventSequence.AddAndExecute(System.Int64,System.Action)">
+            <summary>
+            Adds a new event to the sequence, executing events in sequential order as 
+            they become available.
+            </summary>
+            <param name="sequenceNumber">The sequence number of the event.</param>
+            <param name="action">The body of the event.</param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.EventSequence.Add(System.Int64,System.Action)">
+            <summary>
+            Adds a new event to the sequence but doesn't execute any actions.
+            Execute must be called separately to execute pending actions.
+            </summary>
+            <param name="sequenceNumber"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.EventSequence.Execute">
+            <summary>
+            Executes pending actions while there's ready work to do.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.EventSequence.ExecuteLocked">
+            <summary>
+            Executes pending actions while there's ready work to do.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Collections.EventSequence.NextSequenceNumber">
+            <summary>
+            The next sequence number in the sequence. This value increases
+            as events are executed.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Collections.EventSequence.QueueSize">
+            <summary>
+            Returns the number of events in the sequence which have been added, but not
+            yet executed.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Collections.PriorityQueue`1">
+            <summary>
+            A collection which maintains its elements using a binary heap. Provides fast access
+            to the smallest or largest element, depending on the specified sort order of the
+            collection.
+            </summary>
+            <typeparam name="T">The element type. Must be comparable.</typeparam>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Collections.PriorityQueue`1.Order">
+            <summary>
+            Indicates the sort order of a priority queue.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.Collections.PriorityQueue`1.Order.Ascending">
+            <summary>
+            Indicates that the priority queue is sorted in ascending order (min-heap).
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.Collections.PriorityQueue`1.Order.Descending">
+            <summary>
+            Indicates that the priority queue is sorted in descending order (max-heap).
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.PriorityQueue`1.#ctor(MobileLabs.AirStream.Framework.Collections.PriorityQueue{`0}.Order)">
+            <summary>
+            Initializes a new PriorityQueue with the given sort order.
+            </summary>
+            <param name="order"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.PriorityQueue`1.#ctor(MobileLabs.AirStream.Framework.Collections.PriorityQueue{`0}.Order,System.Int32)">
+            <summary>
+            Initializes a new PriorityQueue with the given sort order and initial capacity.
+            </summary>
+            <param name="order"></param>
+            <param name="capacity"></param>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Collections.PriorityQueue`1.Count">
+            <summary>
+            The number of items in the collection.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Collections.PriorityQueue`1.IsSynchronized">
+            <summary>
+            Always false.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Collections.PriorityQueue`1.IsReadOnly">
+            <summary>
+            Always false.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Collections.PriorityQueue`1.SyncRoot">
+            <summary>
+            The synchronization root of the collection.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.PriorityQueue`1.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns a new enumerator for the collection.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.PriorityQueue`1.System#Collections#Generic#IEnumerable{T}#GetEnumerator">
+            <summary>
+            Returns a new enumerator for the collection.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.PriorityQueue`1.CopyTo(`0[],System.Int32)">
+            <summary>
+            Copies the elements of the collection to an array.
+            </summary>
+            <param name="array"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.PriorityQueue`1.CopyTo(System.Array,System.Int32)">
+            <summary>
+            Copies the elements of the collection to an array.
+            </summary>
+            <param name="array"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.PriorityQueue`1.Push(`0)">
+            <summary>
+            Adds a new item to the priority queue.
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.PriorityQueue`1.Pop">
+            <summary>
+            Removes the topmost element of the priority queue and returns it.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Collections.PriorityQueue`1.Top">
+            <summary>
+            Returns the topmost item in the priority queue.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.RoundRobinQueue`1.Enqueue(System.Int32,`0)">
+            <summary>
+            Enqueues an object in the given round.
+            </summary>
+            <param name="round">The round of the object.</param>
+            <param name="obj">The object to enqueue.</param>
+            <returns>The new number of objects queued for the given round.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.RoundRobinQueue`1.Dequeue">
+            <summary>
+            Dequeues an object in the current round, then advances the round.
+            If no object is queued for the current round, the round will advance
+            until one is found.
+            </summary>
+            <returns>An object in the current queue, or null if no objects are queued.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Collections.RoundRobinQueue`1.RemoveAnyFirst(`0)">
+            <summary>
+            Removes the object from the first of any queue it is found in.
+            </summary>
+            <param name="obj">The object to remove.</param>
+            <returns>true if the object was found and removed, false if otherwise.</returns>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Collections.RoundRobinQueue`1.Sync">
+            <summary>
+            Gets the mutex used to synchronize the queue.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.DateTimeExtensions">
+            <summary>
+            Extension methods for System.DateTime
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.DateTimeExtensions.WithoutSeconds(System.DateTime)">
+            <summary>
+            Zeros out all date compoents below the minute component.
+            </summary>
+            <param name="dateTime">The DateTime to seed from.</param>
+            <returns>A DateTime with no components specified below the minute compoent.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.DateTimeExtensions.ToISOString(System.DateTime,MobileLabs.AirStream.Framework.DateTimeIsoFormatOptions)">
+            <summary>
+            Converts a DateTime instance to an ISO 8601 compatible string format.
+            </summary>
+            <param name="dateTime"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.DateTimeExtensions.ToUnixEpoch(System.DateTime)">
+            <summary>
+            Length of time since the unix epoch.
+            </summary>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Diagnostics.Disposal">
+            <summary>
+            A unified way to cleanup fields. Relevant exceptions are logged as
+            errors and the field reference is atomically nulled. Exceptions are
+            never thrown.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Diagnostics.DisposalCounter`1">
+            <summary>
+            Usage pattern can be seen in GatewaySession.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Diagnostics.DisposalCounter`1.Disposed(System.Int64,System.Boolean)">
+            <summary>
+            Place this call at the end of the classes disposer, this way
+            the alarm triggers if the disposal call is hanging.
+            </summary>
+            <param name="id"></param>
+            <param name="warnOnAlreadyDisposed"></param>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Diagnostics.ExceptionEx">
+            <summary>
+            Exception extensions.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Diagnostics.ExceptionEx.GetExceptionOfType(System.Exception,System.Type[])">
+            <summary>
+            asd
+            </summary>
+            <param name="e">asd</param>
+            <param name="types">asd</param>
+            <returns>asd</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Diagnostics.ExceptionEx.GetExceptionOfType``1(System.Exception)">
+            <summary>
+            asd
+            </summary>
+            <param name="e">asd</param>
+            <returns>asd</returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Diagnostics.ProcessExtensions">
+            <summary>
+            Provides Task support for Processes.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Diagnostics.ProcessExtensions.WaitForExitAsync(System.Diagnostics.Process,System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously waits for the process to exit.
+            </summary>
+            <param name="process">The process to wait for.</param>
+            <param name="cancellationToken">
+            An optional cancellation token. If the token is canceled, the
+            returned Task will also be canceled.
+            </param>
+            <returns>A Task.</returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.IO.AsyncProcess">
+            <summary>
+            BeingErrorReadLine and company wont work with non-\n delinators.
+            A better reader should be written into this class if ever needed.
+            See DeviceAudioService.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.IO.AsyncZipFile">
+            <summary>
+            Delegates ZipFile to a single thread.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.IO.BufferRange">
+            <summary>
+            Represents a range of bytes in a buffer.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.IO.BufferRange.Buffer">
+            <summary>
+            A buffer.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.IO.BufferRange.Offset">
+            <summary>
+            The offset at which the range begins.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.IO.BufferRange.Length">
+            <summary>
+            The number of bytes in the range.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.IO.BufferRange.#ctor(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Initializes a new buffer range.
+            </summary>
+            <param name="buffer">A buffer.</param>
+            <param name="offset">The offset at which the range begins.</param>
+            <param name="length">The number of bytes in the range.</param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.IO.BufferRange.op_Implicit(System.Byte[])~MobileLabs.AirStream.Framework.IO.BufferRange">
+            <summary>
+            Converts a byte array into a range which spans its full length.
+            </summary>
+            <param name="data">A buffer.</param>
+            <returns>A buffer range containing all of the data in the buffer.</returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.IO.AirStreamPath">
+            <summary>
+            Filesnames relavent to AirStream related code.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.IO.AirStreamPath.DataPath">
+            <summary>
+            Filesystem location of deviceConnect dynamic data.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.IO.AirStreamPath.BinaryPath">
+            <summary>
+            Filesystem location of deviceConnect binaries. 
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.IO.AirStreamPath.Configuration">
+            <summary>
+            Path to AirStream.config
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.IO.AirStreamPath.PluginsIni">
+            <summary>
+            Path to plugins.ini
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.IO.AirStreamPath.FriendlyNames">
+            <summary>
+            Path to friendlynames.txt
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.IO.AirStreamPath.License">
+            <summary>
+            Path to deviceconnect.lic
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.IO.AirStreamPath.AuthenticationSecretKey">
+            <summary>
+            Path to AuthenticationSecretKey
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.IO.AirStreamPath.ServiceRestart">
+            <summary>
+            Path to svcrestart utility.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.IO.AirStreamPath.CommandLineToolDirectory">
+            <summary>
+            Path to deviceConnect CLI utility's directory.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.IO.AirStreamPath.ContentStorage">
+            <summary>
+            Path to content storage service root.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.IO.AirStreamPath.DeviceBridgeKeystore">
+            <summary>
+            Path to iOS device pairing keystore. Stores pair records for MITM'd
+            lockdown connections.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.IO.AirStreamPath.AudioConfiguration">
+            <summary>
+            Path to INI file which contains [audio] audioInterfaceId=deviceId
+            list for gateway. List of audio devices can be fetched with:
+            ffmpeg -f avfoundation -list_devices true -i ""
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.IO.AirStreamPath.Adb">
+            <summary>
+            Path to dc-adb utility.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.IO.AirStreamPath.IOSProvisioningTool">
+            <summary>This is a directory, not a file.</summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.IO.AirStreamPath.AndroidTestSigningPfx">
+            <summary>
+            Path to TestSigning.pfx used for Android instrumentation.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.IO.AirStreamPath.AndroidAgent">
+            <summary>
+            Path to Android agent (deviceAgent.apk)
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.IO.AirStreamPath.IOSDeviceControl">
+            <summary>The full path to "deviceControl.ipa" that's stored
+            inside the provisioning tool.</summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.IO.AirStreamPath.Logs">
+            <summary>
+            Path to dC log directory
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.IO.AirStreamPath.SetupLog">
+            <summary>
+            Path to setup.log
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.IO.AirStreamPath.MobileLabsTrustDownload">
+            <summary>
+            Path to Mobile Labs Trust installer
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.IO.AirStreamPath.DeviceBridgeDownload">
+            <summary>
+            Path to dcb.zip -- the user deviceBridge download.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.IO.ReusableBuffer`1">
+            <summary>
+            A thread safe class to get a re-usable byte buffer that persists the
+            largest allocated size.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.IO.ZipDotExe">
+            <summary>
+            Construct a zip using the native info-zip program. This is useful
+            to work around ionic zip's numerous issues.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.IO.ZipDotExe.#ctor">
+            <summary>
+            A constructor.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.IO.ZipDotExe.Add(System.String)">
+            <summary>
+            Add a file or directory
+            </summary>
+            <param name="source">The file or directory's full path.</param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.IO.ZipDotExe.Save(System.String,System.Int32,System.String)">
+            <summary>
+            Make the zip
+            </summary>
+            <param name="filename">filename</param>
+            <param name="timeout">timeout</param>
+            <param name="workingDirectory">workingDirectory</param>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.IO.ZipFileExtensions">
+            <summary>Zip File Extensions</summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.IO.ZipFileExtensions.ExtractAllCorrectly(Ionic.Zip.ZipFile,System.String)">
+            <summary>
+            This exists because ExtractAll does not work on Mono. Ionic.Zip
+            has hardcoded logic where directory separators are backslashes.
+            <param name="zipfile">input</param>
+            <param name="destinationPath">output</param>
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.IO.BufferPool">
+            <summary>
+            Manages a set of buffers allocated as a single continuous block of memory.
+            Designed for operation with SocketAsyncEventArgs-based network applications.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.IO.BufferPool.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new buffer pool.
+            </summary>
+            <param name="totalSize">The total size of the buffer pool, in bytes.</param>
+            <param name="bufferSize">The size of each buffer to be returned.</param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.IO.BufferPool.SetBuffer(System.Net.Sockets.SocketAsyncEventArgs)">
+            <summary>
+            Sets a SocketAsyncEventArgs buffer to a free region in the pool.
+            </summary>
+            <param name="args">The SocketAsyncEventArgs to initialize.</param>
+            <returns>True if the buffer was allocated from contiguous memory, false otherwise.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.IO.BufferPool.FreeBuffer(System.Net.Sockets.SocketAsyncEventArgs)">
+            <summary>
+            Returns the buffer space used by a SocketAsyncEventArgs to the pool.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">The buffer of the SocketAsyncEventArgs does not belong to this pool.</exception>
+            <param name="args">The SocketAsyncEventArgs whose buffer should be freed. The buffer will be set to null.</param>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.IO.ObjectPool`1">
+            <summary>
+            Provides a thread-safe pool of reusable objects. Objects may be returned
+            partially initialized to reduce initialization costs for frequently re-used objects.
+            </summary>
+            <typeparam name="T">The type of objects to pool.</typeparam>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.IO.ObjectPool`1.#ctor(System.Int32,System.Func{`0},System.Action{`0})">
+            <summary>
+            Initializes a new object pool with the given maximum size, initialization and cleanup functions.
+            </summary>
+            <param name="maximumObjectCount">The maximum number of objects to be retained by the pool.</param>
+            <param name="initialize">The initialization function which creates new object instances.</param>
+            <param name="cleanup">A function which cleans up an existing object instance prior to returning it to the pool. May be null.</param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.IO.ObjectPool`1.Dispose">
+            <summary>
+            Disposes the ObjectPool. If the <typeparamref name="T"/> is
+            disposable, all items in the free list will also be disposed.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.IO.ObjectPool`1.#ctor(System.Int32,System.Func{`0})">
+            <summary>
+            Initializes a new object pool with the given maximum size and initialization function.
+            </summary>
+            <param name="maximumObjectCount">The maximum number of objects to be retained by the pool.</param>
+            <param name="initialize">The initialization function which creates new object instances.</param>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.IO.ObjectPool`1.MaximumObjectCount">
+            <summary>
+            The maximum number of objects to retain in the pool.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.IO.ObjectPool`1.AvailableCount">
+            <summary>
+            The number of available objects in the pool.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.IO.ObjectPool`1.Allocate">
+            <summary>
+            Returns a new object of the pool's object type. If an existing object is in the pool,
+            it is returned. Otherwise, the initialize function is called to produce a new instance.
+            </summary>
+            <returns>A new initialized instance of the pool type.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.IO.ObjectPool`1.Free(`0)">
+            <summary>
+            Returns an object to the pool. If the pool is already full, the object is discarded.
+            Regardless of whether the object instance is placed into the pool, the cleanup
+            function passed to the ObjectPool constructor is always called, if provided.
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.IO.ObjectPool`1.Initialize(System.Int32)">
+            <summary>
+            Initializes the pool with a number of initial instances.
+            </summary>
+            <param name="numberOfInitialInstances">The number of objects the pool should be pre-populated with.</param>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.IO.StreamExtensions">
+            <summary>
+            Provides common utilities for manipulating streams.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.IO.StreamExtensions.CopyTo(System.IO.Stream,System.IO.Stream)">
+            <summary>
+            Copies bytes from an input stream to an output stream.
+            </summary>
+            <param name="source">The source stream.</param>
+            <param name="target">The destination stream.</param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.IO.StreamExtensions.CopyTo(System.IO.Stream,System.IO.Stream,System.Int64)">
+            <summary>
+            Copies bytes from an input stream to an output stream.
+            </summary>
+            <param name="source">The source stream.</param>
+            <param name="target">The destination stream.</param>
+            <param name="maxLength">The maximum number of bytes to copy.</param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.IO.StreamExtensions.ReadAllBytes(System.IO.Stream)">
+            <summary>
+            Reads all bytes from the input stream.
+            </summary>
+            <param name="source">The source stream.</param>
+            <returns>All bytes read until the end of the stream.</returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Licensing.WindowsHardware">
+            <summary>
+            a class for getting access to hardware data
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Licensing.WindowsHardware.GetProcessorId">
+            <summary>
+            get the unique processor id.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Licensing.WindowsHardware.GetMacAddress">
+            <summary>
+            get the mac address of the first network interface.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Licensing.WindowsHardware.GetHardDriveId(System.String)">
+            <summary>
+            get the hard drive id
+            </summary>
+            <param name="drive"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Licensing.License">
+            <summary>
+            A product license. Designed to be signed with SigningObject.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Licensing.License.NodeKey">
+            <summary>
+            The node key. If present, the license is only valid on systems with a matching node key.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Licensing.License.LicenseKey">
+            <summary>
+            The unique ID of the license.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Licensing.License.EndDate">
+            <summary>
+            The date on which the license expires.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Licensing.License.StartDate">
+            <summary>
+            The date on which the license becomes valid.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Licensing.License.LicensedParty">
+            <summary>
+            The legal entity which is the recipient of the license.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Licensing.License.Entitlements">
+            <summary>
+            A list of entitlements which defines the access granted by the license.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Licensing.License.#ctor">
+            <summary>
+            Initializes a new license.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Licensing.License.CheckDates">
+            <summary>
+            Validate the dates of the license to make sure it is within the current time window
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Licensing.License.CheckEntitlement(System.String)">
+            <summary>
+            Search the entitlements for the specified productId to see if it exists within this license
+            </summary>
+            <param name="productId"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Licensing.License.CheckNodeKey">
+            <summary>
+            Check the node key of this system against this license to make sure it's a license for this particular system
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Licensing.License.GetAnyLicenseAttribute(System.String)">
+            <summary>
+            Returns the attribute value for any entitlement containing the given attribute key.
+            </summary>
+            <param name="attribute">The attribute to search for.</param>
+            <returns>The first matching attribute value, or null.</returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Licensing.LicenseEntitlement">
+            <summary>
+            Represents access to a specific product granted by a license.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Licensing.LicenseEntitlement.ProductId">
+            <summary>
+            The ID of the licensed product.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Licensing.LicenseEntitlement.Description">
+            <summary>
+            A user-friendly description of the license entitlement.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Licensing.LicenseEntitlement.Attributes">
+            <summary>
+            A generic list of product-specific entitlement data that may be used to offer specific
+            sub-features, resource limits, etc on a per-product basis.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Licensing.LicenseEntitlement.StartDate">
+            <summary>
+            The date and time the entitlement becomes valid. Must fall on or
+            after the license start date.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Licensing.LicenseEntitlement.EndDate">
+            <summary>
+            The date and time the entitlement becomes invalid. Must fall on or
+            before the license end date.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Licensing.LicenseEntitlement.#ctor">
+            <summary>
+            Initializes a new license entitlement.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Licensing.LicenseExtensions">
+            <summary>
+            DOCUMENT ME.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Licensing.LicenseExtensions.VerifyLicense(MobileLabs.AirStream.Framework.Licensing.SignedObject{MobileLabs.AirStream.Framework.Licensing.License},System.String)">
+            <summary>
+            Checks all license error conditions and returns a bool indicating validity.
+            </summary>
+            <param name="license"></param>
+            <param name="productId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Licensing.LicenseState">
+            <summary>
+            Communicates license verification state.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.Licensing.LicenseState.Valid">
+            <summary>
+            Valid license.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.Licensing.LicenseState.Invalid">
+            <summary>
+            Invalidly signed license.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.Licensing.LicenseState.Expired">
+            <summary>
+            Outside of provisioned date range.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.Licensing.LicenseState.NotEntitled">
+            <summary>
+            Invalid product for this license.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.Licensing.LicenseState.InvalidNodeKey">
+            <summary>
+            NodeKey does not match license.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.Licensing.LicenseState.Missing">
+            <summary>
+            It's not there.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Licensing.LicenseManager">
+            <summary>dC license functions.</summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Licensing.LicenseManager.GetNodeId">
+            <summary>Get the unique identifier of this computer.</summary>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Licensing.LicenseManager.GetCertificate">
+            <summary>Retrieves the certificate.</summary>
+            <returns></returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Licensing.LicensingException">
+            <summary>
+            Exception class for if some aspect of license validation fails
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Licensing.LicensingException.ErrorCode">
+            <summary>
+            The error code for the license exception.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Licensing.LicensingException.#ctor">
+            <summary>
+            Initializes a new licensing exception with no parameters.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Licensing.LicensingException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the LicensingException class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Licensing.LicensingException.#ctor(System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the LicensingException class with 
+            </summary>
+            <param name="message">The message that describes the error.</param>
+            <param name="errorCode">A platform specific error code.</param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Licensing.LicensingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the LicensingException class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+            <param name="innerException">The exception that is the current cause of the exception, or null.</param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Licensing.LicensingException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Get object data for serialization
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Licensing.SignedObject`1">
+            <summary>
+            A digitally signed JSON object.
+            </summary>
+            <typeparam name="T">The type of the object which is signed.</typeparam>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Licensing.SignedObject`1.CertificateBlob">
+            <summary>
+            A PEM-encoded X509v3 certificate.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Licensing.SignedObject`1.ContentsBlob">
+            <summary>
+            The base64-encoded JSON object that is signed.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Licensing.SignedObject`1.SignatureBlob">
+            <summary>
+            A base64-encoded signature blob.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Licensing.SignedObject`1.Certificate">
+            <summary>
+            The certificate whose public key the signature is validated against.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Licensing.SignedObject`1.Contents">
+            <summary>
+            The signed object.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Licensing.SignedObject`1.Sign(Org.BouncyCastle.Crypto.AsymmetricCipherKeyPair)">
+            <summary>
+            Signs the object using a private key. The key pair must match the certificate.
+            </summary>
+            <param name="signingKey"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Licensing.SignedObject`1.Verify(Org.BouncyCastle.X509.X509Certificate,System.DateTime)">
+            <summary>
+            Verifies the signature of the object.
+            </summary>
+            <param name="trustedAuthority">The trusted root authority. The certificate must be signed by this identity.</param>
+            <param name="date">The date at which the signature should be verified.</param>
+            <returns>True if the signature is valid, false otherwise.</returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Licensing.SignedObject">
+            <summary>
+            Utilities for creating signed objects.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Licensing.SignedObject.Create``1(``0,Org.BouncyCastle.X509.X509Certificate,Org.BouncyCastle.Crypto.AsymmetricCipherKeyPair)">
+            <summary>
+            Creates a signed object.
+            </summary>
+            <typeparam name="T">The type of object to sign.</typeparam>
+            <param name="value">The object to sign.</param>
+            <param name="certificate">The signing identity to use.</param>
+            <param name="signingKey">A key pair which contains the private key associated with certificate.</param>
+            <returns>A signed object.</returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Mathematics.Matrix4x4">
+            <summary>
+            A 4x4 matrix.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Matrix4x4.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Constructs a new 4x4 matrix from 16 individual values.
+            </summary>
+            <param name="m11"></param>
+            <param name="m12"></param>
+            <param name="m13"></param>
+            <param name="m14"></param>
+            <param name="m21"></param>
+            <param name="m22"></param>
+            <param name="m23"></param>
+            <param name="m24"></param>
+            <param name="m31"></param>
+            <param name="m32"></param>
+            <param name="m33"></param>
+            <param name="m34"></param>
+            <param name="m41"></param>
+            <param name="m42"></param>
+            <param name="m43"></param>
+            <param name="m44"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Matrix4x4.Identity">
+            <summary>
+            Returns the identity matrix.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Matrix4x4.Translate(System.Single,System.Single,System.Single)">
+            <summary>
+            Returns a new translation matrix.
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Matrix4x4.Scale(System.Single,System.Single,System.Single)">
+            <summary>
+            Returns a new scale matrix.
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Matrix4x4.Multiply(MobileLabs.AirStream.Framework.Mathematics.Matrix4x4)">
+            <summary>
+            Returns the result of multiplying this matrix by 
+            <paramref name="rhs"/>.
+            </summary>
+            <param name="rhs">The right hand side.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Matrix4x4.Multiply(MobileLabs.AirStream.Framework.Mathematics.Vector4)">
+            <summary>
+            Returns the result of multiplying this matrix by the vector 
+            <paramref name="rhs"/>.
+            </summary>
+            <param name="rhs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Matrix4x4.Equals(System.Object)">
+            <summary>
+            Returns true if <paramref name="obj"/> is a Matrix4x4 and is exactly
+            equal.
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Matrix4x4.Equals(MobileLabs.AirStream.Framework.Mathematics.Matrix4x4)">
+            <summary>
+            Returns true if the matrix is exactly equal to <paramref name="m"/>.
+            </summary>
+            <param name="m"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Matrix4x4.GetHashCode">
+            <summary>
+            Returns the hash code of this Matrix.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Matrix4x4.op_Multiply(MobileLabs.AirStream.Framework.Mathematics.Matrix4x4,MobileLabs.AirStream.Framework.Mathematics.Matrix4x4)">
+            <summary>
+            See Matrix4x4.Multiply.
+            </summary>
+            <param name="lhs"></param>
+            <param name="rhs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Matrix4x4.op_Equality(MobileLabs.AirStream.Framework.Mathematics.Matrix4x4,MobileLabs.AirStream.Framework.Mathematics.Matrix4x4)">
+            <summary>
+            See Matrix4x4.Equals.
+            </summary>
+            <param name="lhs"></param>
+            <param name="rhs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Matrix4x4.op_Inequality(MobileLabs.AirStream.Framework.Mathematics.Matrix4x4,MobileLabs.AirStream.Framework.Mathematics.Matrix4x4)">
+            <summary>
+            See Matrix4x4.Equals.
+            </summary>
+            <param name="lhs"></param>
+            <param name="rhs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Matrix4x4.ToString">
+            <summary>
+            Returns a string representation of the matrix.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Mathematics.Quaternion">
+            <summary>
+            A quaternion. Extends the complex numbers to 3-dimensional space.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.Mathematics.Quaternion.Real">
+            <summary>
+            The component values of the quaternion.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.Mathematics.Quaternion.I">
+            <summary>
+            The component values of the quaternion.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.Mathematics.Quaternion.J">
+            <summary>
+            The component values of the quaternion.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.Mathematics.Quaternion.K">
+            <summary>
+            The component values of the quaternion.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Quaternion.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Constructs a new Quaternion from its components.
+            </summary>
+            <param name="real"></param>
+            <param name="i"></param>
+            <param name="j"></param>
+            <param name="k"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Quaternion.FromAxisAndAngle(MobileLabs.AirStream.Framework.Mathematics.Vector3,System.Single)">
+            <summary>
+            Creates a new Quaternion which represents a rotation of 
+            <paramref name="angle"/> degrees around the axis specified by 
+            <paramref name="axis"/>.
+            </summary>
+            <param name="axis"></param>
+            <param name="angle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Quaternion.Multiply(MobileLabs.AirStream.Framework.Mathematics.Quaternion)">
+            <summary>
+            Returns the Hamilton product of the quaternion and rhs.
+            </summary>
+            <param name="rhs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Quaternion.Magnitude">
+            <summary>
+            Returns the Euclidean length of the quaternion.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Quaternion.Normalize">
+            <summary>
+            Returns a quaternion whose Magnitude is normalized to 1.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Quaternion.Conjugate">
+            <summary>
+            Returns the quaternion conjugate.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Quaternion.ToMatrix">
+            <summary>
+            Returns a 4x4 rotation matrix expressing the same rotation as the
+            quaternion.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Mathematics.Vector3">
+            <summary>
+            A 3-element vector.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.Mathematics.Vector3.X">
+            <summary>
+            The values of the vector.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.Mathematics.Vector3.Y">
+            <summary>
+            The values of the vector.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.Mathematics.Vector3.Z">
+            <summary>
+            The values of the vector.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Vector3.#ctor(System.Single,System.Single,System.Single)">
+            <summary>
+            Constructs a new Vector3.
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Vector3.Magnitude">
+            <summary>
+            Returns the Euclidean length of the vector.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Vector3.Dot(MobileLabs.AirStream.Framework.Mathematics.Vector3)">
+            <summary>
+            Returns the dot product of the vector with rhs.
+            </summary>
+            <param name="rhs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Vector3.Cross(MobileLabs.AirStream.Framework.Mathematics.Vector3)">
+            <summary>
+            Returns the cross product of the vector with rhs.
+            </summary>
+            <param name="rhs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Vector3.Normalize">
+            <summary>
+            Returns a vector with the same direction whose Magnitude equals 1.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Mathematics.Vector4">
+            <summary>
+            A 4-element vector.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.Mathematics.Vector4.X">
+            <summary>
+            The values of the vector.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.Mathematics.Vector4.Y">
+            <summary>
+            The values of the vector.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.Mathematics.Vector4.Z">
+            <summary>
+            The values of the vector.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.Mathematics.Vector4.W">
+            <summary>
+            The values of the vector.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Vector4.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Constructs a new Vector4.
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+            <param name="w"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Vector4.#ctor(MobileLabs.AirStream.Framework.Mathematics.Vector3,System.Single)">
+            <summary>
+            Constructs a new Vector4 from a Vector3 and a w value.
+            </summary>
+            <param name="v3"></param>
+            <param name="w"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Vector4.Magnitude">
+            <summary>
+            Returns the Euclidean length of the vector.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Vector4.Dot(MobileLabs.AirStream.Framework.Mathematics.Vector4)">
+            <summary>
+            Returns the dot product of the vector with rhs.
+            </summary>
+            <param name="rhs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Mathematics.Vector4.Normalize">
+            <summary>
+            Returns a vector with the same direction whose Magnitude is 1.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Mathematics.Vector4.XYZ">
+            <summary>
+            Returns a Vector3 containing the X, Y, and Z properties of this
+            vector.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Platform">
+            <summary>
+            Utilities related to platform independence.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Platform.IsMono">
+            <summary>
+            Returns true if the application is running on Mono, false otherwise.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Platform.ExecutableFileExtension">
+            <summary>
+            Returns the file extension, including the dot, for executable files on the current platform.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Platform.Exit(System.Int32)">
+            <summary>
+            Wraps libc call to exit for Mono console apps.  Otherwise defers to Environment.Exit.
+            </summary>
+            <param name="exitCode"></param>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Protocol.InterfaceLearningContext">
+            <summary>
+            Tracks newly allocated short type IDs for the protocol interface
+            learning feature. This class should not be used by non-framework code.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Protocol.InterfaceLearningContext.AddLearnedId(System.Guid,System.Int32)">
+            <summary>
+            Adds a new learned ID to the list of pending learned IDs.
+            </summary>
+            <param name="interfaceId"></param>
+            <param name="typeId"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Protocol.InterfaceLearningContext.FinishMessageSend(MobileLabs.AirStream.Protocol.IServiceObjectContext)">
+            <summary>
+            Notifies the service object context that the shortened IDs may now
+            be used safely.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Protocol.InterfaceLearningContext.EndMessageSend">
+            <summary>
+            Flushes the learned IDs list. This must be called even if
+            the message serialization or send fails to ensure that learned IDs
+            from failed messages don't pollute the learned ID list.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Reflection.TypeExtensions">
+            <summary>
+            Extensions to System.Type.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Reflection.TypeExtensions.IsInstanceOfGenericType(System.Type,System.Type)">
+            <summary>
+            Determines whether a type is an instance of the given generic type definition.
+            Searches all implemented interfaces of the provided type,
+            and all base classes of the type, for a matching generic type definition.
+            </summary>
+            <param name="type">The type to check.</param>
+            <param name="genericTypeDefinition">The type of the generic type definition, e.g. typeof(IEnumerable&lt;&gt;)</param>
+            <returns>True if the type is an instance of the generic type, false otherwise.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Reflection.TypeExtensions.GetGenericTypeDefinitionInstance(System.Type,System.Type)">
+            <summary>
+            Finds a type in the given type's inheritance hierarchy (including both interfaces
+            and classes) which is an instance of the given generic type definition. 
+            </summary>
+            <param name="type">The type for which the generic type instance should be located.</param>
+            <param name="genericTypeDefinition">The generic type definition to search for.</param>
+            <returns>A type which instantiates the given generic type definition.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Reflection.TypeExtensions.GetStringConstants(System.Type)">
+            <summary>
+            Returns all public static const string fields from a static class.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.ScalarEventArgs`1">
+            <summary>
+            A generic EventArgs which holds a single value.
+            </summary>
+            <typeparam name="T">The type of value held by the ScalarEventArgs.</typeparam>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.ScalarEventArgs`1.Value">
+            <summary>
+            The value associated with the event.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.ScalarEventArgs`1.#ctor(`0)">
+            <summary>
+            Initializes a new ScalarEventArgs with a value.
+            </summary>
+            <param name="value">The value of the ScalarEventArgs.</param>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Security.EncryptedGadgetStore">
+            <summary>
+            A mildly obfuscated version of GadgetStore, for redistribution. This
+            doesn't really secure the data from an attacker, but does prevent
+            casual snooping.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.EncryptedGadgetStore.#ctor(System.IO.Stream)">
+            <summary>
+            Constructs a new EncryptedGadgetStore.
+            </summary>
+            <param name="stream"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.EncryptedGadgetStore.Encrypt(System.String)">
+            <summary>
+            Creates an encrypted gadget store using an unencrypted gadgets.ini
+            text.
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.EncryptedGadgetStore.Decrypt(System.Byte[])">
+            <summary>
+            Decrypt an encrypted gadget store and return its source text.
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.EncryptedGadgetStore.Load(System.IO.Stream)">
+            <summary>
+            Loads an encrypted gadget store. The content is deflated, encrypted
+            with AES256, base64'd and HMAC-SHA256'd. This method undoes that.
+            </summary>
+            <param name="stream"></param>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Security.GadgetSource">
+            <summary>
+            Provides ROP gadgets for exploit payloads.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.GadgetSource.Import(MobileLabs.AirStream.Framework.Security.PayloadAssembler,System.String)">
+            <summary>
+            Looks up a gadget by name and creates a label for it in the provided
+            PayloadAssembler.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.GadgetSource.ImportFirst(MobileLabs.AirStream.Framework.Security.PayloadAssembler,System.String[])">
+            <summary>
+            Looks up a gadget by name and creates a label for it in the provided
+            PayloadAssembler.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.GadgetSource.AddressOf(System.String)">
+            <summary>
+            Looks up the address of a gadget by name. Applies ASLR slide if
+            needed.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.GadgetSource.IsDefined(System.String)">
+            <summary>
+            Returns whether the given gadget name is defined for this source.
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Security.GadgetSource.DyldAnonFlags">
+            <summary>
+            Returns flags to pass to dyld_anon for this source.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Security.GadgetStore">
+            <summary>
+            Provides GadgetSources loaded from a configuration file.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Security.GadgetStore.Version">
+            <summary>
+            The file's version
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Security.GadgetStore.Description">
+            <summary>
+            A description of the file's contents, e.g. 'iOS Firmware'
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Security.GadgetStore.LoaderVersion">
+            <summary>
+            The required version of ProcessLoader. See _loaderVersion.
+            Update this in Gadgets.ini any time a ProcessLoader update is
+            required to support an iOS version.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.GadgetStore.LoadHeader(MobileLabs.AirStream.Framework.Text.IniSection)">
+            <summary>
+            Loads the initial IniSection.
+            </summary>
+            <param name="section"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.GadgetStore.DemandLoaderSupport">
+            <summary>
+            Demand that the loaderVersion value in the gadgets file is supported
+            by the the ProcessLoader.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.GadgetStore.Load(System.IO.Stream)">
+            <summary>
+            Loads the gadget store. May be overridden to alter loading behavior.
+            </summary>
+            <param name="stream"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.GadgetStore.#ctor(System.IO.Stream)">
+            <summary>
+            Creates a new gadget store. iniStream must contain a Gadgets.ini
+            format configuration file.
+            </summary>
+            <param name="iniStream"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.GadgetStore.GetEmbeddedStore">
+            <summary>
+            Returns the built in GadgetStore loaded from the embedded
+            Gadgets.ini.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.GadgetStore.FindSource(System.String,System.String,System.String,System.String,System.Int64,System.Boolean)">
+            <summary>
+            Constructs a new GadgetSource using gadgets from the specified
+            source. If gadgets are available for multiple builds of the same
+            source, build must be the build number of the build whose gadgets
+            should be used. If the source is subject to ASLR, the slide will be
+            automatically applied to the imported gadget addresses.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Security.Hash">
+            <summary>
+            Utilities for computing hashes.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.Hash.HashStream``1(System.Func{``0},System.IO.Stream)">
+            <summary>
+            Hashes the contents of a stream using the given algorithm. The hash is returned
+            as a hex encoded string.
+            </summary>
+            <typeparam name="T">The type of hash algorithm to use.</typeparam>
+            <param name="algorithm">A function which returns an instance of the hash algorithm.</param>
+            <param name="input">The input stream.</param>
+            <returns>A hex encoded string containing the hash value.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.Hash.HashStreamBytes``1(System.Func{``0},System.IO.Stream)">
+            <summary>
+            Hashes the contents of a stream using the given algorithm. The hash is returned
+            as a byte array.
+            </summary>
+            <typeparam name="T">The type of hash algorithm to use.</typeparam>
+            <param name="algorithm">A function which returns an instance of the hash algorithm.</param>
+            <param name="input">The input stream.</param>
+            <returns>A byte array containing the hash value.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.Hash.HmacSha256(System.String,System.String)">
+            <summary>
+            Computes an HMAC-SHA256 message digest using the given key and message text.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="text">The text of the message.</param>
+            <returns>A hex-encoded string.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.Hash.HmacSha256(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            Computes an HMAC-SHA256 message digest using the given key, message text, and encoding.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="text">The text of the message.</param>
+            <param name="encoding">The character encoding to use to encode the message.</param>
+            <returns>A hex-encoded string.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.Hash.HmacSha256(System.Byte[],System.String)">
+            <summary>
+            Computes an HMAC-SHA256 message digest using the given key and 
+            message text. UTF-8 encoding is used.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="text">The message.</param>
+            <returns>A hex-encoded string.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.Hash.HmacSha256(System.Byte[],System.IO.Stream)">
+            <summary>
+            Computes an HMAC-SHA256 message digest using the given key and message stream.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="stream">The stream from which the message will be read.</param>
+            <returns>A hex-encoded string.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.Hash.Md5(System.String)">
+            <summary>
+            Computes an MD5 message digest using the given message text.
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.Hash.Md5(System.String,System.Text.Encoding)">
+            <summary>
+            Computes an MD5 message digest using the given message text.
+            </summary>
+            <param name="text"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.Hash.Md5(System.IO.Stream)">
+            <summary>
+            Computes a MD5 message digest using the given message stream.
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.Hash.Sha1(System.IO.Stream)">
+            <summary>
+            Computes a SHA-1 message digest using the given message stream.
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.Hash.Sha1(System.Byte[])">
+            <summary>
+            Computes a SHA-1 message digest of the given byte array.
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.Hash.Sha1Bytes(System.Byte[])">
+            <summary>
+            Computes a SHA-1 message digest of the given byte array.
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.Hash.Sha1Bytes(System.IO.Stream)">
+            <summary>
+            Computes a SHA-1 message digest using the given message stream.
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.Hash.Sha512(System.IO.Stream)">
+            <summary>
+            Computes a SHA-512 message digest using the given message stream.
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.Hash.Sha512(System.Byte[])">
+            <summary>
+            Computes a SHA-512 message digest of the given byte array.
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.Hash.Sha512Bytes(System.Byte[])">
+            <summary>
+            Computes a SHA-512 message digest of the given byte array.
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.Hash.Sha512Bytes(System.IO.Stream)">
+            <summary>
+            Computes a SHA-512 message digest using the given message stream.
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.Hash.SlowEquals(System.String,System.String)">
+            <summary>
+            Constant time string comparison.
+            </summary>
+            <param name="lhs"></param>
+            <param name="rhs"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Security.PayloadAssembler">
+            <summary>
+            Constructs exploit payloads using an assembler-like syntax.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Security.PayloadAssembler.Label">
+            <summary>
+            A label. Labels allow forward references, and their positions can be
+            set using .Mark().
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.PayloadAssembler.#ctor(System.Byte[])">
+            <summary>
+            Creates a payload assembler which writes its output into buf. Buf
+            must be large enough to hold the payload or array access violations
+            will occur.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.PayloadAssembler.Origin(System.Int64)">
+            <summary>
+            Sets the 'origin' of the following instructions. The origin is the
+            location in memory where the payload will exist at runtime, and is
+            used to resolve label references to an absolute address.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.PayloadAssembler.Origin">
+            <summary>Returns the current origin.</summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.PayloadAssembler.Seek(System.Int32)">
+            <summary>
+            Sets the 'position' of the following instructions. The position is
+            the location in the buffer where instructions will be written.
+            </summary>
+            <param name="offset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.PayloadAssembler.Position">
+            <summary>Returns the current position.</summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.PayloadAssembler.WordSize(System.Int32)">
+            <summary>
+            Sets the word size. .Word() instructions will write this many bytes.
+            Size may be no larger than 8.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.PayloadAssembler.WordSize">
+            <summary>Returns the current word size.</summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.PayloadAssembler.Define(System.String,System.Nullable{System.Int64})">
+            <summary>
+            Defines a new label. If externalAddress is specified, sets its 
+            address to an external address. Otherwise, the label's address is
+            undefined until .Mark()ed.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.PayloadAssembler.Mark(MobileLabs.AirStream.Framework.Security.PayloadAssembler.Label)">
+            <summary>
+            Sets the location of the given label to the current origin. 
+            </summary>
+            <param name="label"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.PayloadAssembler.Word(System.Int64)">
+            <summary>
+            Writes a word to the instruction stream. The size of a word is
+            defined by calling .WordSize() and is generally the size of a
+            pointer on the target architecture.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.PayloadAssembler.Word(MobileLabs.AirStream.Framework.Security.PayloadAssembler.Label,System.Nullable{System.Int64})">
+            <summary>
+            Writes the value of a label to the instruction stream. If the label
+            is not yet defined, 0 is written and the address is later patched
+            when the label is defined.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.PayloadAssembler.Constant(System.Byte[])">
+            <summary>
+            Writes a pointer to a literal constant to the instruction stream.
+            The actual constant data will be allocated later by .ConstantPool()
+            and the pointer to the data will be written to the instruction
+            stream at the current position.
+            
+            You must call .ConstantPool() after this to write the constant data.
+            </summary>
+            <param name="buf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.PayloadAssembler.String(System.String)">
+            <summary>
+            Writes a pointer to a null terminated string to the instruction
+            stream. You must call .ConstantPool() after this to write the data.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.PayloadAssembler.StringArray(System.String[])">
+            <summary>
+            Writes a pointer to a NULL-terminated array of pointers to NULL-
+            terminated strings to the instruction stream. That is, char **.
+            You must call .ConstantPool() after this to write the data.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Security.PayloadAssembler.ConstantPool">
+            <summary>
+            Writes the data for any constants that have been used since the last
+            call to .ConstantPool(). If you forget to call this, all of your
+            constant pointers will be undefined.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Threading.ScopedVariable`1">
+            <summary>
+            A dynamically scoped variable.
+            </summary>
+            <typeparam name="T">The variable's type.</typeparam>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Threading.ScopedVariable`1.Value">
+            <summary>
+            The current scopedVariable of the variable.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.ScopedVariable`1.op_Implicit(MobileLabs.AirStream.Framework.Threading.ScopedVariable{`0})~`0">
+            <summary>
+            Converts the scoped variable to its current value.
+            </summary>
+            <param name="scopedVariable">The scoped variable.</param>
+            <returns>The scoped variable's current value.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.ScopedVariable`1.With(`0,System.Action)">
+            <summary>
+            Executes the given action with the scoped variable bound to the
+            given value. During the execution of body(), this scoped variable
+            will have the provided value.
+            </summary>
+            <param name="value">The value to bind the scoped variable to.</param>
+            <param name="body">The action to execute.</param>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Threading.AsyncLazy`1">
+            <summary>
+            A value which is both async and lazy, i.e. on first access creates a 
+            Task to initialize the value, in a way that avoids duplicates.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.AsyncLazy`1.#ctor(System.Func{`0})">
+            <summary>
+            Constructs a new AsyncLazy.
+            </summary>
+            <param name="valueFactory"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.AsyncLazy`1.#ctor(System.Func{System.Threading.Tasks.Task{`0}})">
+            <summary>
+            Constructs a new AsyncLazy.
+            </summary>
+            <param name="taskFactory"></param>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Threading.AsyncLazyDisposable`1">
+            <summary>
+            A value which is both async and lazy, i.e. on first access creates a
+            Task to initialize the value, in a way that avoids duplicates. Supports
+            disposable values -- once disposed, an AsyncLazy will not allow value
+            creation and will automatically dispose any previously instantiated or
+            in-progress object.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.AsyncLazyDisposable`1.#ctor(System.Func{`0})">
+            <summary>
+            Constructs a new AsyncLazy.
+            </summary>
+            <param name="valueFactory"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.AsyncLazyDisposable`1.#ctor(System.Func{System.Threading.Tasks.Task{`0}})">
+            <summary>
+            Constructs a new AsyncLazy.
+            </summary>
+            <param name="taskFactory"></param>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Threading.AsyncLazyDisposable`1.Value">
+            <summary>
+            Returns a Task for the future value. The Task is created on demand.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.AsyncLazyDisposable`1.Dispose">
+            <summary>
+            Disposes the object when its Task completes if its Task has been
+            created, otherwise atomically prevents creation.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Threading.AsyncLazy">
+            <summary>
+            Creates AsyncLazy&lt;T&gt; instances.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.AsyncLazy.From``1(System.Func{``0})">
+            <summary>
+            Creates an async lazy using the function provided.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valueFactory"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.AsyncLazy.From``1(System.Func{System.Threading.Tasks.Task{``0}})">
+            <summary>
+            Creates an async lazy using the task factory provided.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="taskFactory"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.AsyncLazy.FromDisposable``1(System.Func{System.Threading.Tasks.Task{``0}})">
+            <summary>
+            Creates a disposable async lazy using the task factory provided.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="taskFactory"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Threading.LimitedConcurrencyLevelTaskScheduler">
+            <summary>
+            Provides a task scheduler which will only execute a certain number of
+            tasks in parallel.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.LimitedConcurrencyLevelTaskScheduler.#ctor(System.Int32)">
+            <summary>
+            Creates a new instance with the specified degree of parallelism.  
+            </summary>
+            <param name="maxDegreeOfParallelism"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.LimitedConcurrencyLevelTaskScheduler.QueueTask(System.Threading.Tasks.Task)">
+            <summary>
+            Queues a task to the scheduler.  
+            </summary>
+            <param name="task"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.LimitedConcurrencyLevelTaskScheduler.TryExecuteTaskInline(System.Threading.Tasks.Task,System.Boolean)">
+            <summary>
+            Attempts to execute the specified task on the current thread.  
+            </summary>
+            <param name="task"></param>
+            <param name="taskWasPreviouslyQueued"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.LimitedConcurrencyLevelTaskScheduler.TryDequeue(System.Threading.Tasks.Task)">
+            <summary>
+            Attempt to remove a previously scheduled task from the scheduler. 
+            </summary>
+            <param name="task"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Threading.LimitedConcurrencyLevelTaskScheduler.MaximumConcurrencyLevel">
+            <summary>
+            Gets the maximum concurrency level supported by this scheduler.  
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.LimitedConcurrencyLevelTaskScheduler.GetScheduledTasks">
+            <summary>
+            Gets an enumerable of the tasks currently scheduled on this scheduler.  
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.LinkedTimeoutCancellation.#ctor(System.Threading.CancellationToken,System.Int32)">
+            <summary>
+            Create a linked CancellationToken with an optional timeout.
+            </summary>
+            <param name="linkTo"></param>
+            <param name="timeoutAfter">If 0, then there's no timeout set.</param>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Threading.TaskEx">
+            <summary>
+            Task extensions.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Threading.TaskEx.TrackTasks">
+            <summary>
+            Enable this debug feature to call .Track() automatically on all
+            tasks that had .Forget() called on them. There is a performance
+            penalty and log spam associated with this.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.TaskEx.FromResult``1(``0)">
+            <summary>
+            Creates a completed task. For .NET 4.0 compatibility.
+            </summary>
+            <typeparam name="T">The result type.</typeparam>
+            <param name="result">The precomputed result.</param>
+            <returns>A completed task.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.TaskEx.DoOrDie``1(System.Threading.Tasks.Task{``0},System.Threading.CancellationToken,System.Action)">
+            <summary>
+            Wraps a task in another task which cancels itself if the supplied
+            cancellation token is canceled. This allows non-cancellable tasks
+            to be abandoned. Note that the underlying task may never
+            acknowledge the cancellation. If the wrapper task cancels, the 
+            cleanup function will be called.
+            </summary>
+            <typeparam name="T">The type of value produced by the Task.
+            </typeparam>
+            <param name="inner">The inner task.</param>
+            <param name="cancel">Cancellation token.</param>
+            <param name="cleanup">
+            Gets run if the task is canceled. Do something useful like
+            cleaning up resources.
+            </param>
+            <returns>Wrapper task.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.TaskEx.DoOrDie(System.Threading.Tasks.Task,System.Threading.CancellationToken,System.Action)">
+            <summary>
+            Non-generic equivalent to DoOrDie&lt;T&gt;. Note that this throws
+            away the result of the underlying task, so the generic version
+            should be used for tasks which produce a value.
+            </summary>
+            <param name="inner"></param>
+            <param name="cancel"></param>
+            <param name="cleanup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.TaskEx.Forward(System.Threading.Tasks.Task,System.Threading.Tasks.TaskCompletionSource{System.Object})">
+            <summary>
+            Forwards the result of a Task into another TaskCompletionSource.
+            Upon normal completion, the TaskCompletionSource's result is set to
+            null.
+            </summary>
+            <param name="task"></param>
+            <param name="target"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.TaskEx.Forward``1(System.Threading.Tasks.Task{``0},System.Threading.Tasks.TaskCompletionSource{``0})">
+            <summary>
+            Forwards the result of a Task<typeparamref name="T"/> into another
+            TaskCompletionSource.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="task"></param>
+            <param name="target"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.TaskEx.Forget(System.Threading.Tasks.Task)">
+            <summary>
+            Use this instead of the syntatically ugly pragma to get around
+            warning 4014.
+            </summary>
+            <param name="task">The task which generates warning 4014</param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.TaskEx.Forget(System.Threading.Tasks.Task,NLog.Logger)">
+            <summary>
+            "Forget" and log exceptions.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Threading.TaskEx.IsFinished(System.Threading.Tasks.Task)">
+            <summary>
+            Returns true if the task has entered any of its completion states.
+            </summary>
+            <param name="task">The task</param>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Serialization.Csv">
+            <summary>
+            Serialize objects to and from CSV format.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Serialization.Csv.Serialize``1(``0[],MobileLabs.AirStream.Framework.Serialization.CsvOptions)">
+            <summary>
+            Serialize a collection of objects to CSV.
+            </summary>
+            <param name="objs"></param>
+            <param name="options"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Serialization.Csv.Serialize``1(``0[],System.Collections.Generic.Dictionary{System.String,System.String[]},MobileLabs.AirStream.Framework.Serialization.CsvOptions)">
+            <summary>
+            Serialize a collection of objects to CSV.
+            </summary>
+            <param name="objs"></param>
+            <param name="flattenColumns"></param>
+            <param name="options"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Serialization.Csv.Parse(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="csv"></param>
+            <returns></returns>
+            <exception cref="T:System.FormatException"></exception>
+            /// <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Serialization.Csv.Deserialize``1(System.String,MobileLabs.AirStream.Framework.Serialization.CsvOptions)">
+            <summary>
+            
+            </summary>
+            <param name="csv"></param>
+            <param name="options"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+            <exception cref="T:System.FormatException"></exception>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Serialization.Csv.FormatValue(System.Object,System.Boolean)">
+            <summary>
+            Formats a value to the expectations of a CSV cell.
+            </summary>
+            <param name="o"></param>
+            <param name="quoted"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Serialization.Csv.GetMimeType(MobileLabs.AirStream.Framework.Serialization.CsvOptions)">
+            <summary>
+            Return the MIME type given the provided options set.
+            </summary>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Serialization.Csv.FlattenAttribute">
+            <summary>
+            Use this in addition to the flattenColumns argument to
+            cause a Dictionary&lt;string, object&gt; to flatten into
+            column rows.
+            ie, your dictionary is named "flattenme" and contains
+            { foo: "bar", blah: "baz" }
+            Then for flattenColumns you'd pass { flattenme: ["foo", "blah"] }
+            and the columns "foo" and "blah" are included in the serialization.
+            
+            Properties that are flattened can not be deserialized.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Serialization.CsvOptions">
+            <summary>
+            Options for the CSV serializations
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.Serialization.CsvOptions.None">
+            <summary>
+            No CSV options specified.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Framework.Serialization.CsvOptions.HeaderRow">
+            <summary>
+            Skip the first line. Used for skipping header rows.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Serialization.Json">
+            <summary>
+            JSON serialization with standardized settings.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Serialization.Json.GetJsonSettings(Newtonsoft.Json.Serialization.IContractResolver)">
+            <summary>
+            JSON serialization with standardized settings.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Serialization.Json.Deserialize``1(System.String)">
+            <summary>
+            JSON deserialization with standardized settings.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Serialization.Json.Deserialize(System.String,System.Type)">
+            <summary>
+            JSON deserialization with standardized settings.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Serialization.Json.Serialize(System.Object,System.Boolean)">
+            <summary>
+            JSON serialization with standardized settings.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Serialization.Json.Serialize(System.Object,MobileLabs.AirStream.Framework.Serialization.JsonFormatting)">
+            <summary>
+            JSON serialization with standardized settings.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Serialization.Json.Serialize(System.Object,Newtonsoft.Json.Serialization.IContractResolver)">
+            <summary>
+            JSON serialization with standardized settings.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Serialization.Json.SerializePretty(System.Object,System.Boolean)">
+            <summary>
+            JSON serialization with standardized settings and pretty-printing.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Serialization.Json.Serialize(System.Object,System.Collections.Generic.IList{Newtonsoft.Json.JsonConverter})">
+            <summary>
+            JSON serialization with standardized settings.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Serialization.Plist">
+            <summary>
+            Provides utilities for parsing and generating XML plists.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Serialization.Plist.ToObject(System.Byte[])">
+            <summary>
+            Converts a binary plist document to an object.
+            </summary>
+            <param name="data">The raw plist data.</param>
+            <returns>An object.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Serialization.Plist.ToObject(System.String)">
+            <summary>
+            Converts an XML plist document to an object.
+            </summary>
+            <param name="xml">The XML source text.</param>
+            <returns>An object.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Serialization.Plist.ToObject(System.Xml.Linq.XDocument)">
+            <summary>
+            Converts a parsed XML plist document to an object.
+            </summary>
+            <param name="doc">The XML document.</param>
+            <returns>An object.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Serialization.Plist.ToObject(System.Xml.Linq.XElement)">
+            <summary>
+            Converts an XElement describing a plist object to an object.
+            </summary>
+            <param name="element">
+            A dict, true, false, real, integer, string, 
+            data, or date XML element containing valid plist data.
+            </param>
+            <returns>
+            A dictionary, bool, double, long, string, byte[], or 
+            DateTime value, depending on the type of data.
+            </returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Serialization.Plist.ToXml(System.Object,System.Boolean)">
+            <summary>
+            Converts an object to an XML plist.
+            
+            See notes in ResignDeviceControl. The jist of it is, at least
+            on iOS7, in an entitlements file, <false /> is invalid. It has to be
+            <false/> (no space). You may or may not need to fix it in post.
+            Or write it real clean like in here.
+            </summary>
+            <param name="plist"></param>
+            <param name="pretty"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Serialization.Plist.ToXElement(System.Object)">
+            <summary>
+            Converts an object to its XML plist representation.
+            </summary>
+            <param name="plist"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Serialization.Plist.WriteBinary(System.Object,System.IO.Stream)">
+            <summary>
+            Writes an object's binary plist representation to a stream.
+            </summary>
+            <param name="plist"></param>
+            <param name="ms"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Serialization.Plist.ReadBinary(System.IO.Stream)">
+            <summary>
+            Reads a binary plist from the given Stream. The Stream must be
+            seekable, and the binary plist must occur at the end of the stream.
+            This is required because binary plists have a "trailer" instead of
+            a header. It's recommended to use a MemoryStream.
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Serialization.Uid">
+            <summary>
+            A unique identifier used in plist representations.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Serialization.Uid.Value">
+            <summary>
+            A unique ID value.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Serialization.Uid.#ctor(System.Int64)">
+            <summary>
+            Don't use this.
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Text.CaseInsensitiveStringComparer">
+            <summary>
+            Utility class that allows the sorting of linq queries regardless of case.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Text.CaseInsensitiveStringComparer.Compare(System.String,System.String)">
+            <summary>
+            Compares two strings in a case insensitive manner.
+            </summary>
+            <param name="x">String to compare</param>
+            <param name="y">String to compare</param>
+            <returns>An in signifying sort order</returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Text.IniParser">
+            <summary>
+            Parses ini files (no really)
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Text.IniParser.Parse(System.IO.Stream)">
+            <summary>
+            Reads all the lines in input and returns an array of IniSections.
+            
+            The format looks like this:
+            
+            [section]
+            k1=v
+            
+            # Comment lines are ignored
+            [section2]
+            k=v
+            this_key_will_be_set_to_true
+            keys can have spaces=yep
+              leading and trailing space is removed=yep
+            
+            Duplicate sections are allowed. The first section, before any [], is
+            always returned as a section with a blank name, and is always
+            present.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Text.IniParser.Parse(System.String)">
+            <summary>
+            Parse an INI in in accordance to <see cref="M:MobileLabs.AirStream.Framework.Text.IniParser.Parse(System.IO.Stream)" />
+            </summary>
+            <seealso cref="M:MobileLabs.AirStream.Framework.Text.IniParser.Parse(System.IO.Stream)" />
+        </member>
+        <member name="T:MobileLabs.AirStream.Framework.Text.IniSection">
+            <summary>
+            A [section] in an ini file.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Text.IniSection.Name">
+            <summary>
+            The section's name.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Framework.Text.IniSection.Values">
+            <summary>
+            The key/value pairs in the section.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Framework.Text.IniSection.#ctor(System.String)">
+            <summary>
+            Constructs a new IniSection.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.AirStreamPeer">
+            <summary>
+            Allows an application to provide and consume network services based on service interfaces.
+            
+            AirStreamPeer provides a unified client and server architecture. A typical consumer will create
+            an AirStreamPeer, add zero or more services using AddService, then listen for and/or connect to
+            remote peers using Listen and Connect, respectively.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.AirStreamPeer.#ctor">
+            <summary>
+            Initializes a new AirStreamPeer with the default settings.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.AirStreamPeer.#ctor(MobileLabs.AirStream.Protocol.AirStreamPeerConfiguration)">
+            <summary>
+            Initializes a new AirStreemPeer with specific configuration settings.
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.AirStreamPeer.Dispose">
+            <summary>
+            Disposes the peer and closes any open connections.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.AirStreamPeer.Dispose(System.Boolean)">
+            <summary>
+            Disposes the peer and closes any open connections.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.AirStreamPeer.Connection.GetSendLock(System.Int32)">
+            Connection must be unlocked when calling this method or
+            deadlocks with SendMessageAsync may occur.
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.AirStreamPeer.Listen(System.Net.IPEndPoint,System.String)">
+            <summary>
+            Starts listening for client connections at the given IP endpoint.
+            </summary>
+            <param name="endPoint">The IP address and port number to listen on.</param>
+            <param name="connectionName">The name of connections accepted by this peer.</param>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.AirStreamPeerConfiguration">
+            <summary>
+            Configuration parameters for AirStreamPeer.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Protocol.AirStreamPeerConfiguration.MaximumConnectionCount">
+            <summary>
+            The maximum number of connections a listener will accept at one time.
+            Further connections will be blocked until another disconnects.
+            
+            Defaults to 8192.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Protocol.AirStreamPeerConfiguration.TotalNetworkBufferSize">
+            <summary>
+            The total size, in bytes, of the peer's network IO buffers. Defaults to 32MB.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Protocol.AirStreamPeerConfiguration.BufferSize">
+            <summary>
+            The size of individual read/write buffers. Defaults to 8kb.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Protocol.AirStreamPeerConfiguration.ServiceFactory">
+            <summary>
+            The factory used to instantiate services.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Protocol.AirStreamPeerConfiguration.ServiceObjectFactory">
+            <summary>
+            The factory used to instantiate RPC objects.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Protocol.AirStreamPeerConfiguration.Identity">
+            <summary>
+            The cryptographic identity used to encrypt connections made by the peer.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Protocol.AirStreamPeerConfiguration.TrustStore">
+            <summary>
+            The trust store used to validate cryptographic identities.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Protocol.AirStreamPeerConfiguration.VerifyClientIdentities">
+            <summary>
+            True if servers should validate their clients' identities against
+            their trust store. False to accept all clients.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.AirStreamPeerConfiguration.#ctor">
+            <summary>
+            Initializes a new AirStreamPeerConfiguration with the default settings.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.AirStreamPeerException">
+            <summary>
+            Represents errors related to AirStreamPeers.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.AirStreamPeerException.#ctor">
+            <summary>
+            Initializes a new instance of the AirStreamPeerException class.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.AirStreamPeerException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the AirStreamPeerException class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.AirStreamPeerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the AirStreamPeerException class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+            <param name="innerException">The exception that is the current cause of the exception, or null.</param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.AirStreamPeerException.#ctor(MobileLabs.AirStream.Protocol.IFaultDescription)">
+            <summary>
+            Initializes a new instance of the AirStreamPeerException class using a fault description.
+            </summary>
+            <param name="fault">The fault description.</param>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.AutoConnectService`1">
+            <summary>
+            Automatically establishes and maintains a connection to a service. If the connection to the
+            service is lost, reconnection will automatically be attempted as needed.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.AutoConnectService`1.#ctor(MobileLabs.AirStream.Protocol.IAirStreamLocalPeer,System.String,System.Int32,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="localPeer">Ownership is not taken.</param>
+            <param name="host"></param>
+            <param name="port"></param>
+            <param name="serviceName"></param>
+            <param name="serviceVersion"></param>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.Codec">
+            <summary>
+            Utility methods for reading and writing binary data.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.DataEncoding">
+            <summary>
+            Specifies what encoding method should be used to serialize types which may have
+            multiple possible representations.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.SlotAttribute">
+            <summary>
+            Indicates that a property or method should be serialized using a certain slot number.
+            Slot numbers must be unique within a single interface, not including inherited properties.
+            Properties and methods may both have Slot declarations, but the slot numbers must not overlap.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Protocol.SlotAttribute.Slot">
+            <summary>
+            The slot number of the associated property or method.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Protocol.SlotAttribute.CanonicalName">
+            <summary>
+            A canonical name for metadata exports. Used to alias properties
+            which may use reserved names in other languages.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.SlotAttribute.#ctor(System.Int32)">
+            <summary>
+            Constructs a new SlotAttribute.
+            </summary>
+            <param name="slot">The slot number to assign.</param>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.ClientDependencyAttribute">
+            <summary>
+            Marks an interface as being used by a specific client. This allows the
+            InterfaceGenerator to be selective when exporting, and helps document
+            what interface changes can affect.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.IAirStreamPeer">
+            <summary>
+            Represents a peer in an AirStream network. All clients and servers are peers which
+            communicate using service interfaces.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.IAirStreamPeer.GetService``1(System.String,System.Int32)">
+            <summary>
+            Asynchronously gets a named service interface on the peer and returns it.
+            </summary>
+            <typeparam name="T">The type of the service interface to retrieve.</typeparam>
+            <param name="serviceName">The name which identifies the service.</param>
+            <param name="serviceVersion">The version of the service to use.</param>
+            <returns>A task which returns the service interface.</returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.IAirStreamLocalPeer">
+            <summary>
+            Represents a local peer, to which new services may be added and by which connections
+            to remote peers may be established.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.IAirStreamLocalPeer.AddService``2(System.String,System.Int32)">
+            <summary>
+            Adds a new service to the peer. The service must not already exist on the peer.
+            </summary>
+            <typeparam name="TInterface">The service interface to expose.</typeparam>
+            <typeparam name="TImplementation">The concrete service type.</typeparam>
+            <param name="serviceName">The name of the service to add.</param>
+            <param name="serviceVersion">The version of the service to add.</param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.IAirStreamLocalPeer.Connect(System.String,System.Int32,System.String)">
+            <summary>
+            Establishes a connection to a remote peer, asynchronously.
+            </summary>
+            <param name="hostName">The hostname of the remote peer.</param>
+            <param name="port">The port on which the peer is listening.</param>
+            <param name="name">The internal name of the connection, for logging.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.IAirStreamLocalPeer.Listen(System.Net.IPEndPoint,System.String)">
+            <summary>
+            Begins listening for connections from remote peers on the given endpoint.
+            </summary>
+            <param name="endPoint">The IP endpoint to listen on.</param>
+            <param name="connectionName">The name of connections accepted by this peer.</param>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.IAirStreamRemotePeer">
+            <summary>
+            Represents a remote peer.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Protocol.IAirStreamRemotePeer.IsConnected">
+            <summary>
+            Returns false if the remote peer is known to be disconnected.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.IAirStreamRemotePeer.Disconnect">
+            <summary>
+            Forces the connection to the remote peer to disconnect. Any further service calls
+            will result in failure.
+            </summary>
+        </member>
+        <member name="E:MobileLabs.AirStream.Protocol.IAirStreamRemotePeer.Disconnected">
+            <summary>
+            Fired when it becomes known that the remote peer was disconnected.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.IFaultDescription">
+            <summary>
+            Describes an unexpected error condition. Exceptions which are
+            thrown by services are translated into fault descriptions when
+            returned over the network.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Protocol.IFaultDescription.Message">
+            <summary>
+            The primary description of the fault. Required.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Protocol.IFaultDescription.OriginalExceptionType">
+            <summary>
+            The full, assembly qualified name of the original exception type.
+            Platforms which do not support .NET exceptions should set this value
+            to null.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Protocol.IFaultDescription.StackTrace">
+            <summary>
+            The stack trace of the original exception, if available. May be null.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Protocol.IFaultDescription.Properties">
+            <summary>
+            A list of key-value pairs which provides extra information about the
+            fault. May be null or empty.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Protocol.IFaultDescription.InnerFault">
+            <summary>
+            If the fault was caused by another fault, contains the description of
+            the original fault. May be null.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.IFaultDescriptionProperty">
+            <summary>
+            Additional data that may be associated with a fault.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Protocol.IFaultDescriptionProperty.Name">
+            <summary>
+            The name of the property.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Protocol.IFaultDescriptionProperty.Value">
+            <summary>
+            The value of the property.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.IMessagePort">
+            <summary>
+            A destination to which raw message data may be written. Client proxies
+            send their serialized data to a message port.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.IMessagePort.Send(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Writes a complete message to the port.
+            </summary>
+            <param name="buffer">The buffer which contains the message.</param>
+            <param name="offset">The offset of the beginning of the message in the buffer.</param>
+            <param name="length">The length of the message.</param>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.INull">
+            <summary>
+            An empty interface which may be used for async methods which return no result but should
+            be awaitable. Task&lt;INull&gt; should be used instead of the non-generic Task for service
+            interfaces.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.IResult`1">
+            <summary>
+            A container for a method call return value.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Protocol.IResult`1.Value">
+            <summary>
+            The return value.
+            </summary>
+        </member>
+        <member name="P:MobileLabs.AirStream.Protocol.IResult`1.Fault">
+            <summary>
+            The fault which occurred during the method's execution, if the method
+            terminated abnormally.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.IServiceBinder">
+            <summary>
+            Binds services to channels. This service interface is used internally by
+            AirStreamPeer.
+            </summary>
+            <remarks>
+            An implementation of IServiceBinder is automatically bound on channel 0
+            when a connection is accepted. This allows a remote peer to bind other
+            interfaces to channels using the BindService method.
+            </remarks>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.IServiceBinder.BindService(System.String,System.Int32)">
+            <summary>
+            Binds the service with the given name to a channel. Further messages
+            on the returned channel will be directed to the service.
+            </summary>
+            <param name="serviceName">The name of the service to bind.</param>
+            <param name="serviceVersion">The version of the service to bind.</param>
+            <returns>The channel number of the newly bound channel.</returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.IServiceFactory">
+            <summary>
+            Provides service instances, given a service type.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.IServiceFactory.CreateInstance(System.Type)">
+            <summary>
+            Creates an instance of the given service type.
+            </summary>
+            <param name="serviceType">The service class to instantiate.</param>
+            <returns>A new instance of the service.</returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.DefaultServiceFactory">
+            <summary>
+            Simple default service factory which simply instantiates the type using its default
+            constructor.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.IServiceObjectContext">
+            <summary>
+            Provides low level services used by service objects.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.IServiceObjectContext.BindObject(System.Object,System.Action{System.IO.Stream,System.Object,MobileLabs.AirStream.Protocol.IServiceObjectContext,System.Int32})">
+            <summary>
+            Binds an object and messageHandler to a local channel. Messages received
+            on the channel will be handled by calling messageHandler(messageStream, obj)
+            where obj is the original object passed to BindObject and messageStream
+            is a Stream containing the contents of the message.
+            </summary>
+            <param name="obj">The object to bind to the channel.</param>
+            <param name="messageHandler">The message handler which will decode messages.</param>
+            <returns>The number of the newly bound channel.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.IServiceObjectContext.ReleaseObject(System.Int32)">
+            <summary>
+            Releases a channel previously bound by this connection's BindObject method. After
+            ReleaseObject returns, channelNumber may be reused.
+            </summary>
+            <param name="channelNumber"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.IServiceObjectContext.GetRemoteChannelPort(System.Int32)">
+            <summary>
+            Gets a message send port for the given remote channel.
+            </summary>
+            <param name="channelNumber">The channel number to get a message port for.</param>
+            <returns>A send port.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.IServiceObjectContext.GetTypeIdentifierForSerialization(System.Guid,System.Boolean@)">
+            <summary>
+            Gets a connection-specific type ID for the given interface GUID. The type ID
+            is used for compact serialization of objects. 
+            </summary>
+            <param name="interfaceId">The GUID of the interface to get a type ID for.</param>
+            <param name="isNew">
+            Upon return, true if the type ID was newly allocated. Callers must
+            properly transmit newly allocated type IDs when this value is set to true.
+            
+            If isNew is true, the caller must call
+            SetTypeIdentifierForSerializationComplete to indicate when it is
+            safe for other message senders to send messages using the short id.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.IServiceObjectContext.SetTypeIdentifierForSerializationComplete(System.Guid,System.Int32)">
+            <summary>
+            Indicates that the long-form interface ID has been successfully
+            written to the message transport medium and that other messages can
+            safely use the shortened ID only.
+            </summary>
+            <param name="interfaceId"></param>
+            <param name="typeId"></param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.IServiceObjectContext.GetInterfaceIdentifierForDeserialization(System.Int32)">
+            <summary>
+            Looks up the interface ID previously associated with a type ID by a message
+            read in this context. The type ID must have been previously associated with
+            the interface ID by a call to SetInterfaceIdentifierForDeserialization.
+            </summary>
+            <param name="typeId"></param>
+            <returns>The interface ID.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.IServiceObjectContext.SetInterfaceIdentifierForDeserialization(System.Guid,System.Int32)">
+            <summary>
+            Associates an interface ID with a type ID for later reuse.
+            </summary>
+            <param name="interfaceId">The GUID of the interface to map to the type ID.</param>
+            <param name="typeId">The type ID to learn.</param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.IServiceObjectContext.GetFaultDescription(System.Exception)">
+            <summary>
+            Returns a fault description for an exception.
+            </summary>
+            <param name="exception"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.IServiceObjectFactory">
+            <summary>
+            Creates objects which implement service interfaces.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.IServiceObjectFactory.Create``1">
+            <summary>
+            Creates an object which implements the given interface.
+            </summary>
+            <typeparam name="T">An interface.</typeparam>
+            <returns>An object which implements the interface.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.IServiceObjectFactory.Create(System.Type)">
+            <summary>
+            Creates an object which implements the given interface, when the interface is not statically known.
+            </summary>
+            <param name="type">The type to implement.</param>
+            <returns>An object which implements the interface.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.IServiceObjectFactory.Create``1(MobileLabs.AirStream.Protocol.IMessagePort,MobileLabs.AirStream.Protocol.IServiceObjectContext)">
+            <summary>
+            Creates a new channel-bound object which implements the given interface.
+            </summary>
+            <typeparam name="T">An interface.</typeparam>
+            <param name="sendPort">A message send port to which the object is bound.</param>
+            <param name="context">The service object context in which the object will be created.</param>
+            <returns>An object which implements the interface.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.IServiceObjectFactory.Create(System.Type,MobileLabs.AirStream.Protocol.IMessagePort,MobileLabs.AirStream.Protocol.IServiceObjectContext)">
+            <summary>
+            Creates a new channel-bound object which implements the given interface,
+            when the interface is not statically known.
+            </summary>
+            <param name="type">The type to implement.</param>
+            <param name="sendPort">A message send port to which the object is bound.</param>
+            <param name="context">The service object context in which the object will be created.</param>
+            <returns>An object which implements the interface.</returns>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.IServiceObjectFactory.GetMessageDispatcher(System.Type)">
+            <summary>
+            Returns a function suitable for use with IServiceObjectContext.BindObject.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.MessageDispatchContinuationState">
+            <summary>
+            This class is used internally and is not intended to be used by user code.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.ServiceObjectFactory">
+            <summary>
+            Provides concrete implementations of service object interfaces. 
+            This class is responsible for generating all code related to service 
+            interfaces, including proxies, DTOs, serializers, deserializers, 
+            message dispatchers, etc.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.ServiceObjectFactory.#ctor">
+            <summary>
+            Initializes a new ServiceObjectFactory with the default settings.
+            </summary>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.ServiceObjectFactory.#ctor(System.String)">
+            <summary>
+            Initializes a new ServiceObjectFactory with a directory in which the
+            generated assembly may be saved.
+            </summary>
+            <param name="assemblyDirectory">
+            The directory in which the assembly will be generated when Save is 
+            called.
+            </param>
+        </member>
+        <member name="M:MobileLabs.AirStream.Protocol.ServiceObjectFactory.Save">
+            <summary>
+            Saves the generated assembly to the filesystem.
+            </summary>
+        </member>
+        <member name="T:MobileLabs.AirStream.Protocol.ServiceOperationContext">
+            <summary>
+            Provides extra context information for service operations.
+            This allows a service to get information about a request beyond
+            that which is passed to it as parameters.
+            
+            Note that the values in this class are only valid while the body of
+            a service method is executing. Any asynchronous operations performed
+            by the service must retain their own copy of this information prior to
+            it going out of scope.
+            </summary>
+        </member>
+        <member name="F:MobileLabs.AirStream.Protocol.ServiceOperationContext.RemotePeer">
+            <summary>
+            The remote peer which initiated the current operation.
+            </summary>
+        </member>
+    </members>
+</doc>

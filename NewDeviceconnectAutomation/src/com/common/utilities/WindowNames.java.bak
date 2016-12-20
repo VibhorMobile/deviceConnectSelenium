@@ -1,0 +1,186 @@
+package com.common.utilities;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import com.sun.jna.Native;
+import com.sun.jna.PointerType;
+import com.sun.jna.Structure;
+import com.sun.jna.platform.win32.WinDef.HWND;
+import com.sun.jna.win32.StdCallLibrary;
+
+public class WindowNames {
+String s3;
+static int arraySize = 10;
+static int arrayGrowth = 2;
+static String[] m = new String[arraySize];
+static int count = 0;
+
+public static String[] WindowNames()
+{
+
+    final List<WindowInfo> inflList = new ArrayList<WindowInfo>();
+    final List<Integer> order = new ArrayList<Integer>();
+    int top = User32.instance.GetTopWindow(0);
+    while (top != 0) 
+    {
+        order.add(top);
+        top = User32.instance.GetWindow(top, User32.GW_HWNDNEXT);
+    }
+    User32.instance.EnumWindows(new WndEnumProc()
+    {
+        @Override
+        public boolean callback(int hWnd, int lParam)
+        {
+            if (User32.instance.IsWindowVisible(hWnd))
+            {
+                RECT r = new RECT();
+                User32.instance.GetWindowRect(hWnd, r);
+                if (r.left > -32000) 
+                { // minimized
+                    PointerType hwnd = User32.instance.GetForegroundWindow();
+                    byte[] buffer = new byte[1024];
+                    User32.instance.GetWindowTextA(hWnd, buffer, buffer.length);
+                    String title = Native.toString(buffer);
+
+                    if (m.length == count)
+                    {
+                        // expand list
+                        m = Arrays.copyOf(m, m.length + arrayGrowth);
+                    }
+                    m[count] = Native.toString(buffer);
+                    //System.out.println("title====" + m[count]);
+                    count++;
+                }
+
+            }
+            return true;
+        }
+    }, 0);
+
+   return m;
+}
+
+public static String getDefaultBrowser() throws Exception
+{
+    
+        // Get registry where we find the default browser
+        Process process = Runtime.getRuntime().exec("REG QUERY HKEY_CLASSES_ROOT\\http\\shell\\open\\command");
+        Scanner kb = new Scanner(process.getInputStream());
+        while (kb.hasNextLine())
+        {
+            // Get output from the terminal, and replace all '\' with '/' (makes regex a bit more manageable)
+            String registry = (kb.nextLine()).replaceAll("\\\\", "/").trim();
+
+            // Extract the default browser
+            Matcher matcher = Pattern.compile("/(?=[^/]*$)(.+?)[.]").matcher(registry);
+            if (matcher.find())
+            {
+                // Scanner is no longer needed if match is found, so close it
+                kb.close();
+                String defaultBrowser = matcher.group(1);
+
+                // Capitalize first letter and return String
+                defaultBrowser = defaultBrowser.substring(0, 1).toUpperCase() + defaultBrowser.substring(1, defaultBrowser.length());
+                return defaultBrowser;
+            }
+        }
+        // Match wasn't found, still need to close Scanner
+        kb.close();
+    
+    // Have to return something if everything fails
+    return "Error: Unable to get default browser";
+}
+
+public static boolean readTxtFile(String filepath) throws Exception 
+{
+	Boolean flag=false;
+	BufferedReader br = new BufferedReader(new FileReader(filepath));
+	String sCurrentLine;
+
+	while ((sCurrentLine = br.readLine()) != null)
+	{
+		if(sCurrentLine.contains("Asia/Calcutta"))
+		{
+			return flag=true;
+		}
+	}
+	return flag;
+}
+
+public static boolean getFileExistence(String folderPath) throws Exception
+{
+	Boolean flag=true;
+	File folder = new File(folderPath);
+	File[] listOfFiles = folder.listFiles();
+
+	for (File file : listOfFiles) 
+	{
+	    if (file.isFile()) 
+	    {
+	        if(file.getName().contains("deviceConnect_CLI_UserGuide.pdf"))
+	        {
+	        	flag=false;
+	        	break;
+	        }
+	    }
+	}
+	return flag;
+}
+
+public static interface WndEnumProc extends StdCallLibrary.StdCallCallback {
+    boolean callback(int hWnd, int lParam);
+}
+
+public static interface User32 extends StdCallLibrary {
+    final User32 instance = (User32) Native.loadLibrary("user32", User32.class);
+
+    boolean EnumWindows(WndEnumProc wndenumproc, int lParam);
+
+    boolean IsWindowVisible(int hWnd);
+
+    int GetWindowRect(int hWnd, RECT r);
+
+    void GetWindowTextA(int hWnd, byte[] buffer, int buflen);
+
+    int GetTopWindow(int hWnd);
+
+    int GetWindow(int hWnd, int flag);
+
+    HWND GetForegroundWindow();
+
+    final int GW_HWNDNEXT = 2;
+
+}
+
+public static class RECT extends Structure {
+    public int left, top, right, bottom;
+}
+
+public static class WindowInfo {
+    int hwnd;
+    RECT rect;
+    String title;
+
+    public WindowInfo(int hwnd, RECT rect, String title) {
+        this.hwnd = hwnd;
+        this.rect = rect;
+        this.title = title;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("(%d,%d)-(%d,%d) : \"%s\"", rect.left, rect.top,         rect.right, rect.bottom, title);
+    }
+}
+}

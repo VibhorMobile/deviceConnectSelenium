@@ -1,0 +1,2 @@
+Email,IsActive,FirstName,MiddleName,LastName,Notes,Organization,Title,Location,Address1,Address2,City,Region,PostalCode,Country,HomePhone,MobilePhone,OfficePhone,FaxPhone,Password,PasswordHash,PasswordSalt,PasswordHashType,Roles
+ritdhwaj@ml.com,TRUE,Test,,,,,,,,,,,,,,,,,deviceconnect,,,,"""Administrator"""

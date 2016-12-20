@@ -1,0 +1,32 @@
+[
+  {
+    "Id": "301edaa9-aa4e-47c4-a63f-7d64f6e01acf",
+    "Email": "deepak_admin@ml.com",
+    "IsActive": true,
+    "FirstName": "",
+    "MiddleName": null,
+    "LastName": "",
+    "Notes": null,
+    "Organization": null,
+    "Title": null,
+    "Location": null,
+    "Address1": null,
+    "Address2": null,
+    "City": null,
+    "Region": null,
+    "PostalCode": null,
+    "Country": null,
+    "HomePhone": null,
+    "MobilePhone": null,
+    "OfficePhone": null,
+    "FaxPhone": null,
+    "Password": null,
+    "PasswordHash": null,
+    "PasswordSalt": null,
+    "PasswordHashType": 0,
+    "Roles": [
+      "Administrator"
+    ],
+    "CreatedDate": null
+  }
+]
